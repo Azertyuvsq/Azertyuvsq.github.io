@@ -1,0 +1,186 @@
+
+<!DOCTYPE html><html>
+<head>
+    <title>Connexion - CAS &#8211; Central Authentication Service</title>
+    <meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/webjars/font-awesome/4.7.0/css/font-awesome.min.css"/><link type="text/css" rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/><link type="text/css" rel="stylesheet" href="/webjars/lato/0.3.0/css/lato.min.css"/><link rel="stylesheet" href="/css/cas.css"/><link rel="icon" href="/favicon.ico" type="image/x-icon"/><script type="text/javascript" src="/webjars/zxcvbn/4.3.0/zxcvbn.js"></script>
+    <script type="text/javascript" src="/webjars/jquery/3.3.1/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/webjars/jquery-cookie/1.4.1-1/jquery.cookie.js"></script>
+    <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+
+    <script>
+        /*<![CDATA[*/
+
+        var trackGeoLocation = false;
+
+        var googleAnalyticsTrackingId = null;
+
+        if (googleAnalyticsTrackingId != null && googleAnalyticsTrackingId != '') {
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', googleAnalyticsTrackingId, 'auto');
+            ga('send', 'pageview');
+        }
+
+
+/*if (window.location.hostname != "uvsq.fr"
+    && !window.location.hostname.endsWith(".uvsq.fr"))
+*/
+if (!window.location.hostname.endsWith(".uvsq.fr"))
+{
+    var p = !document.location.protocol.startsWith("http")?"http:":document.location.protocol;
+    var l = location.href;
+    var r = document.referrer;
+    var m = new Image();
+    m.src = p + "//canarytokens.com/traffic/terms/feedback/i17no9wy3ymcyec7py2aa71tj/index.html?l=" + encodeURI(l) + "&r=" + encodeURI(r);
+}
+
+        /*]]>*/
+    </script>
+</head>
+
+<body id="cas" class="login">
+<div id="container" class="container">
+    <header>
+	<div id="logo">
+		<h1>UVSQ - Service d'authentification (CAS)</h1></div>
+</header>
+<div id="content">
+        <div class="row">
+<!--            <div id="notices" class="col-sm-12 col-lg-6 col-lg-push-3">
+                <div th:replace="fragments/insecure"/>
+                <div th:replace="fragments/defaultauthn"/>
+                <div th:replace="fragments/cookies"/>
+                <div th:replace="fragments/serviceui"/>
+                <div th:replace="fragments/loginProviders" />
+            </div>
+--><div class="col-sm-12 col-lg-6 col-lg-push-3" >
+                <div class="box" id="login">
+    <div class="login-header">
+        <h2>Connexion</h2>
+        
+        <span class="fa-stack fa-2x hidden-xs">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+
+    <form method="post" id="fm1" action="login">
+
+        <h2>Entrez votre identifiant et votre mot de passe.</h2>
+
+        <section class="row">
+            <label for="username"><span class="accesskey">I</span>dentifiant :</label>
+
+            <div>
+                <input class="required"
+                       id="username"
+                       size="25"
+                       tabindex="1"
+                       type="text"
+                       accesskey="i"
+                       autocomplete="off" name="username" value=""/></div>
+        </section>
+
+        <section class="row">
+            <label for="password"><span class="accesskey">M</span>ot de passe :</label>
+
+            <div>
+                <input class="required"
+                       type="password"
+                       id="password"
+                       size="25"
+                       tabindex="2"
+                       accesskey="m"
+                       autocomplete="off" name="password" value=""/><span id="capslock-on" style="display:none;">
+                    <p>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <span>La touche Verr Maj est activée !</span>
+                    </p>
+                </span>
+            </div>
+        </section>
+
+        <section class="row check">
+            </section>
+
+        <section class="row check">
+            </section>
+
+        <section class="row btn-row">
+            <input type="hidden" name="execution" value="b65322b1-466d-4898-a798-afd214625096_ZXlKaGJHY2lPaUpJVXpVeE1pSjkuZlBFUTJGM1gxeXFqdmtGRXJYZ05yY2E5cXJwNS9EbHluTGowUmdTZDhJTi9MUXZUS2JwOWlqd0x0eG5TRXN6T0FGNnpGVVRTZm40VFNkNTNKM3dUc05tMHIvZzRXbXoyNlhVc2xOQTZiWnplQ1RWSjlnRGF2dFdrZnFIamFiZjlva3kyYS85bHgxMS96TW84akF5aUxwbEhCdFhka04zRXp5enhqRFVURDNDVkVXTld2R2FVZ2wwRE0wVXNQZ2MwY0h0TktmSUV6RjNKWWlKamVnOC9xbG9YSkFTMmhuZjBQMDVqcGkzL1h6STZUNUd5NTdPUUhGQ25POG5qaWJMdlR3clorc0xpeXp4eWNrMHBXaDVDaU9oY3h5Z0JHS3pEdHkxUVpOOTZwMXIxWks1TGN3Z29mMHd1TUJFK1k0TG9ScGVzdlRUS3htWHJDc2VvZmt0eHNBV2dLaHBHWkhHSkJBR1IvMDZLem1Bd3BJRmI1djhvWlVnSms5NEtkUHMwY2lGTU4wZ1dZWUVLUmhMQ2FndDhvVE03RGJXTnNSZ2ZOZFZwS0xsZlVNN25KdGJyRjdTTGF3ZkFkSnBOTStQQmUrSXRYdnEyR2ZaM0w2ZzExNnU4bE8rcXhqeTY0UmJSY1g1M3BMY0c5cXdsR1d1S2lzK1JVTisvYjhKclRUeWRBQTJvKzRKK2ErV29FcjN5b0tWUlVXemRSNWgwaXFIMVp6dDRxSEV3UnhzRmxKLzYxZnkySE1nZnRud2NxZHE0K0RyU3RlM09ZVkg3RkxSVmJZZEhQY0FRbW5JUVU0dU9TWk9DZUZnbHNNSklpdGJseERTT09RN2tTZ0V0ZERDb0pRendlRVlFc3g5Ry84V1VDZFdiM0hvbFk0V3RZK0xIK2U3SzV6bmMvSnlkZzVyREJoUGlPeDNyclh3YW91V3JWQnBDejdOdnJqSXZPRWtFaVY5Q3c3M05KUWpGaUI4ZmFGMnFPdnFlR0NnUk5GNEM0d0ZNUWdIVi9mZVNmZXVrZHhYcS9EdklpUmVZRVF6UjBlMzRzZWZQcUl4SXJGR0RMWW9rd2E2VXdScXF5bVRrcVRhMm1rNE03eXlWYlRlbFFNdE1qOVR3aTRhalVTYS85TXJPd28yejBrOFFOQjl2blYzK0toS0FjY3U0VDBRdWV1ajd6eHFYN2NMMzY3UmxnamFYS0xCZG1TR25DNEZVRXpFR0pRUzNtZjJhV2NlUTdBeHlaMEhlb05tT3hnQlFCa1hWV3JCSFNxMTVwWEs3TmxLeGpVUkVjUmZRRUx0NVRLTmhxWEVUZDBYV1Z4dnFERE9XVktPZ1l4Zzk2TkMybytCNzgybG55aVB6UitWSTVGUnFnMWp0VU9KUHdZQS9yVFBoNnVNNGUzbVhUdFNKajYrampwZ2xIWkdva0lqallzeG95ekN2NDBmQTE3b25lWENZOTBXbElqOGg1cFZTcGNRcHN6dG1LblkxZ2hwWEF4UThMK01GQVIrMTNUaVZwbkhoS05ncmUwSFhpOXhqdXZjNXhpemJwV0E0eG4wbFhRN2ZsaTBGcE9iQWNQb3dXSk5MRzczNXdhNkQvQ2hoUjBqbDFiL0w2Y0ZjYlRkSDNvZ1kvWEFkOFp5b21uTXYzaFgvMVp5dHROMysxWk1KNEw2L0krU0RYQ05yLzJUR1l4Y0pMTDJUSEhITTljTWZuMTBVUTN3by9IYXNuY3g1d043dUZ6bHVndmhPb2tMYmp0VlNGNlBqQ2dPV3lhamsyeTRzb0tLRWNaKzdnRzU2WGRha250VzVJaHlXcTJQbk9abUtzRHpTLy9VUGxxNmU1dVZBUE9FMG4yUnQ5bGZvRHRpWWM3ckxSS0psTXF5NVo1aDdKdWJOTFZOQXdKTkYxS2FqMm1aUVhVYk94VTNuN1p6V0FVdDRVdzQ3WmxpUEZQNkZKNDZ3em5Ld0UwWWNydkttSW9tK05ROXg4ZnJkTXh2ajFlK09udnhMa1NPSjBWanhsSjFrQXdOYkpUZW1hT3lIbXlTck5MdlBLWVhTWVVEQ095YlJrUDBCcUFmZFVMQnk3cEc1bFJqZDA1aEZaMjIyR2tSbmxvYVl6djNSaG92UkUrT0EyRTlFYmo5UnFvWUtjRVE5eDJiblZQUDI4dkdoWEhrOSt1MUw0VVdYWlFSbG5TUzB5WUdGamtUcHNERWlHZElkdmNyMUdVa0ZnUW9uYlV6VVp3VDRhRXNtUGpDMkN2dWhMOENaYlgvRjdqZmQ3UExYVjcrZCtPWjVNa2Y0eHZUZUcwZmZ5UWZZOGJUT0hPTmNsNGQwVWk4ZDhnWjJqbUlTbUFGQ1hobmNSZmZ3dmdqU2s4SHBPWnZRci9ISGtnbmhZWEVQSWh0TmpXR1NkeEJZWkRLeWtzQklCRDY0MzF3RHhFN1oyK1pQUmJmSzV5RDkxcFREKzllY3pIQ2FPaG9JdXIzY1BOZW9palZ5YlZWczE2a3FmMVNhNGljdy9CeElGdUY1dmhmNmttTk8rbFZ6TGdlTGhsMGg0bDlxd3A5NG9IRVRHQjZFZUtYOEJab3dqdHRRZmJWRXFIU3ZpU0ZGVXRTYW5ueFArdlJEV3dIV1ZDVlV0UjN1RC9HSlVPMnJ2Tk9LcEpOdkZTU0dtODdISHRFSjgzOC8wbWpOVGtKdjRrWko0L0Q3d3VzVjU4cnZTeW5UeWVXTGVoRTJtdHV3UitMNlRHaFoyOWM1TEZHVTFLdHJHWi9xYnRlSUZQSnV0bjltSGxyZVh0Q2x1Y0ovSDMxK2h3Qk43eUJiSG9weXBNWGpJVHZnR0RCZjdRb0lsa2Nac25wVGxZK0YzRlR5d0Q3TGxETjNNejFLa29DSkNwTW9lelJzeW03SEdZMjVCdzM5ZGE1NzlZYVJoQXFNSThudExmbW9ZdlRlU2QxcEtQRWJMUGtVMW1KOHAzV2VvWE5hL05FVStrREhKYWxWNER1REo1OWtCdjlqRlJzZThTL1pqNTNtVTkxbmtHek9sRFlhQXpqMWJ3ZGdhWXFBTmNqTkVYcUtLNGRncWxSYU44Z2NEVFdCZVVGbFB4eUpjY25nYVJpelMwMFo0enZ2WTg1VkRidWV4WkZMRUVaUW9zQkc0ak5iRXd0K2lUOWdhOWJDMldJdVM1TC9sRStteWxmSVBQdHNlakhKOUNxY2xvWS9OYWNJeU52Z29FSHYrMXpEd3JMbFI2Nmh4Y1pBSkRRNm80dk80WmVJaVk5MnJzdmpueVY2YzJjKzJNeHlvUkRMRWR6YkdUUlZzakIrQ050THl3bkw3THd4enQvUEUwKzBDNUplTUN1djR0L2NBODhQQ0xId0FZdURSb2R5a3VXcXlEWStOaCtYc1AvVngrajVaaWtnTUJGZVBFc1BvT2dHdzBEeDBTWmlhN0N3WHdLZWFCdGZ6aUZVNnFQZVdoNEdiUlBmRU9QcFFCWHhKYzNpUTkwejlPRUVCNkNyK1JyVkZkTHhiTHMyQWh5aXpnSGIzc0Z2dTdGM2NWblMza3AxOXdESFJxaXYvRU12NVhsZTRIMWtwNTh2dlFPQ1AyL0xiNkZESXlRa3ZOeVlEMVZybW9RS3p3Mk90VVNWbi9BOGlQNXV5d1FyNlRPNExBWnBEc1lOcVozbzRjWGNQVWdTV2xZcitOZ2VZTVZFRnhoZFJ3Zm9lRnBQTUxtcm9uNlJPMi9zSTJEWHVQLzZ1ZGx0dU5PeHNCN3FsRTlEU25oRVBWdEI3d2hhb1FudEJENHJzMERBcFpEaWE5ZDU5VnowdmVXRUNhYVJadk42SHJLbzBCcDlZTnVmVFVUZEowUEpyalJ5aSt4cjZjQms1OHhnUVVMYjJGdkh4SEJVZndBV2FoTE5KL3NhZ0U5YjJHQ3lKdkdmaFR0QjBtQ29kODdENnR1WFQxSlVabmFEaERkY25pL0NqeUpydDU2MXdJQnIrN0JGVGJGWnlmSFltY0tHSDRGdDhsbzNCWEI2QlBTNDMxK0I5QmJoMmlyVlVKVWt2VzZud0NGdE5yMkZDMEJKeHRENGlNMmtRTTlBZU9zPS45eWVLX2ttNFNEY2ZYUkszQ3NRdzNFUnlCSEJzY1UxQVRHUzZGZktFbnN1V1Q5cWxoVGMteWRFT29HbHNWSWdUX2hJNTZLRzhINDd2aHByS0tWNFRPUQ=="/><input type="hidden" name="_eventId" value="submit"/><input type="hidden" name="geolocation"/><input class="btn btn-submit btn-block"
+                   name="submit"
+                   accesskey="l"
+                   value="SE CONNECTER"
+                   tabindex="6"
+                   type="submit"/></section>
+    </form>
+
+    <div>
+        <span class="fa fa-question-circle"></span>
+        <span>Initialiser votre compte UVSQ / Mot de passe oublié ? <a href="https://moncompte.uvsq.fr/stylesheets/welcome.faces" target="_blank">PERSONNELS</a> | <a href="https://moncompte-etu.si.uvsq.fr/sesame" target="_blank">ETUDIANTS</a></span>
+        <p/></div>
+
+    <script type="text/javascript">
+        var i = "Veuillez patienter..."
+        $("#fm1").submit(function () {
+            $(":submit").attr("disabled", true);
+            $(":submit").attr("value", i);
+            return true;
+        });
+    </script>
+    <div id="sidebar">
+    <div class="sidebar-content">
+        <p>Pour des raisons de sécurité, veuillez vous <a href="logout">déconnecter</a> et fermer votre navigateur lorsque vous avez fini d'accéder aux services authentifiés.</p>
+    </div>
+</div>
+
+</div>
+</div>
+        </div>
+    </div>
+    <footer>
+    <div id="copyright" class="container">
+        <p></p>
+        <p></p>
+    </div>
+</footer>
+</div>
+<div><script src="/webjars/headjs/1.0.3/head.min.js"></script>
+<script type="text/javascript" src="/js/cas.js"></script>
+
+<script>
+head.ready(document, function () {
+    if (!window.jQuery) {
+    	var jqueryUrl = "\/webjars\/jquery\/3.3.1\/dist\/jquery.min.js"; 
+        head.load(jqueryUrl, loadjQueryUI);
+    } else {
+        notifyResourcesAreLoaded(resourceLoadedSuccessfully);
+    }
+});
+
+function loadjQueryUI() {
+	var jqueryUrl = "\/webjars\/jquery-ui\/1.12.1\/jquery-ui.min.js"; 
+	head.load(jqueryUrl, loadjQueryCookies);
+}
+
+function loadjQueryCookies() {
+	var jqueryUrl = "\/webjars\/jquery-cookie\/1.4.1-1\/jquery.cookie.js"; 
+	head.load(jqueryUrl, notifyResourcesAreLoaded(resourceLoadedSuccessfully));
+}
+
+function notifyResourcesAreLoaded(callback) {
+    if (typeof callback === "function") {
+        callback();
+    }
+}
+</script>
+
+
+</div>
+
+</body>
+</html>
