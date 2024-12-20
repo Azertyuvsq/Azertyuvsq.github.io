@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copier un site avec iframe</title>
+    <title>Scraping Simple avec JavaScript</title>
 </head>
 <body>
-    <h1>Bienvenue sur mon site !</h1>
-    <p>Voici un autre site intégré grâce à un iframe :</p>
-    <iframe src="https://www.uvsq.fr" width="100%" height="600px" style="border:none;">
-        Votre navigateur ne supporte pas les iframes.
-    </iframe>
+    <h1>Contenu copié d'un autre site</h1>
+    <div id="copied-content">
+        <!-- Le contenu du site sera copié ici -->
+    </div>
+
+    <script>
+        // Utilisation de la méthode Fetch API pour récupérer le contenu d'un autre site
+        fetch('https://www.uvsq.fr')
+            .then(response => response.text())
+            .then(data => {
+                // Insérer le contenu du site dans la page
+                document.getElementById('copied-content').innerHTML = data;
+            })
+            .catch(error => console.error('Erreur:', error));
+    </script>
 </body>
 </html>
