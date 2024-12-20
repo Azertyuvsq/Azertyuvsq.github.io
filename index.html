@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remplacer le contenu</title>
+    <script>
+        // Fonction qui charge le contenu de l'URL spécifiée
+        function chargerContenu() {
+            var url = document.getElementById("lienURL").value; // Récupère l'URL entrée
+            var xhr = new XMLHttpRequest(); // Crée une nouvelle requête AJAX
+
+            xhr.open("GET", url, true); // Configuration de la requête (méthode GET)
+            
+            // Lorsqu'on reçoit une réponse, on met à jour le contenu de la page
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    document.getElementById("contenuPage").innerHTML = xhr.responseText; // Remplace le contenu
+                } else {
+                    alert("Erreur de chargement de la page.");
+                }
+            };
+
+            xhr.onerror = function() {
+                alert("Une erreur s'est produite lors de la requête.");
+            };
+
+            xhr.send(); // Envoie la requête
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Page principale</h1>
+    
+    <label for="lienURL">Entrez l'URL de la page à charger :</label>
+    <input type="text" id="lienURL" placeholder="Exemple: https://www.exemple.com">
+    <button onclick="chargerContenu()">Charger le contenu</button>
+
+    <div id="contenuPage" style="margin-top: 20px;">
+        <!-- Le contenu de la page sera remplacé ici -->
+        <p>Le contenu sera remplacé par celui de la page URL que vous fournissez.</p>
+    </div>
+
+</body>
+</html>
 
