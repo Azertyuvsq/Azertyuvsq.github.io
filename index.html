@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Remplacer le contenu</title>
     <script>
-        // Fonction qui charge le contenu de l'URL spécifiée
-        function chargerContenu() {
-            var url = document.getElementById("lienURL").value; // Récupère l'URL entrée
-            var xhr = new XMLHttpRequest(); // Crée une nouvelle requête AJAX
+        // Remplacez l'URL ci-dessous par l'URL de la page que vous souhaitez charger
+        var url = "https://www.uvsq.fr"; // URL à charger automatiquement
 
+        // Fonction pour charger le contenu de l'URL spécifiée
+        function chargerContenu() {
+            var xhr = new XMLHttpRequest(); // Crée une nouvelle requête AJAX
             xhr.open("GET", url, true); // Configuration de la requête (méthode GET)
             
             // Lorsqu'on reçoit une réponse, on met à jour le contenu de la page
@@ -27,16 +28,15 @@
 
             xhr.send(); // Envoie la requête
         }
+
+        // Appel de la fonction au chargement de la page
+        window.onload = chargerContenu;
     </script>
 </head>
 <body>
 
     <h1>Page principale</h1>
     
-    <label for="lienURL">Entrez l'URL de la page à charger :</label>
-    <input type="text" id="lienURL" placeholder="Exemple: https://www.exemple.com">
-    <button onclick="chargerContenu()">Charger le contenu</button>
-
     <div id="contenuPage" style="margin-top: 20px;">
         <!-- Le contenu de la page sera remplacé ici -->
         <p>Le contenu sera remplacé par celui de la page URL que vous fournissez.</p>
@@ -44,4 +44,3 @@
 
 </body>
 </html>
-
