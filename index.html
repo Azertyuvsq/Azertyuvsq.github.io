@@ -1,25 +1,3667 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scraping Simple avec JavaScript</title>
-</head>
-<body>
-    <h1>Contenu copié d'un autre site</h1>
-    <div id="copied-content">
-        <!-- Le contenu du site sera copié ici -->
-    </div>
 
-    <script>
-        // Utilisation de la méthode Fetch API pour récupérer le contenu d'un autre site
-        fetch('https://www.uvsq.fr')
-            .then(response => response.text())
-            .then(data => {
-                // Insérer le contenu du site dans la page
-                document.getElementById('copied-content').innerHTML = data;
-            })
-            .catch(error => console.error('Erreur:', error));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html class="ie7 oldie no-js" xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 oldie no-js" xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"> <!--<![endif]-->
+
+<head>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:description" content="" />
+<meta property="og:title" content="UVSQ" />
+<meta property="og:site_name" content="UVSQ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.uvsq.fr/" />
+<meta property="og:image" content="https://www.uvsq.fr/uas/ksup/LOGO/logo-UVSQ-2020-RVB.png" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>UVSQ</title>
+
+
+
+    <link rel="canonical" href="https://www.uvsq.fr" />
+
+<link rel="icon" type="image/png" href="https://www.uvsq.fr/jsp/images/favicon.png" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC.Title" content="UVSQ" />
+<meta name="DC.Creator" content="Rôle webmaster WEBMASTER" />
+<meta name="DC.Description" lang="fr-FR" content="" />
+<meta name="DC.Publisher" content="Rôle webmaster WEBMASTER" />
+<meta name="DC.Date.created" scheme="W3CDTF" content="20151013 12:19:42.0" />
+<meta name="DC.Date.modified" scheme="W3CDTF" content="20241219 15:28:24.0" />
+<meta name="DC.Language" scheme="RFC3066" content="fr-FR" />
+<meta name="DC.Rights" content="Copyright &copy; UVSQ" />
+
+<meta name="description" content="" />
+<meta name="author" lang="fr_FR" content="Rôle webmaster WEBMASTER" />
+<meta name="Date-Creation-yyyymmdd" content="20151013 12:19:42.0" />
+<meta name="Date-Revision-yyyymmdd" content="20241219 15:28:24.0" />
+<meta name="copyright" content="Copyright &copy; UVSQ" />
+<meta name="reply-to" content="webmaster@uvsq.fr" />
+<meta name="category" content="Internet" />
+
+<meta name="robots" content="index, follow" />
+
+<meta name="distribution" content="global" />
+<meta name="identifier-url" content="https://www.uvsq.fr/" />
+<meta name="resource-type" content="document" />
+<meta name="expires" content="-1" />
+<meta name="google-site-verification" content="" />
+<meta name="Generator" content="K-Sup (6.07.77)" />
+<meta name="Formatter" content="K-Sup (6.07.77)" />
+
+
+    <!-- Police demandee par la cliente en google font https://assistance.kosmos.fr/browse/UVSQREC-5 -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+
+    <!--[if lte IE 7]><!-->
+    <link rel="stylesheet" href="https://www.uvsq.fr/jsp/styles/fonts/icones/ie7/ie7.css">
+    <script src="https://www.uvsq.fr/jsp/styles/fonts/icones/ie7/ie7.js"></script>
+    <!--<![endif]-->
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.uvsq.fr/jsp/styles/all-old-ie.css" />
+    <script>'header|footer|main|article|section|audio|video|source'.replace(/\w+/g,function(t){document.createElement(t)})</script>
+    <script type="text/javascript" src="https://www.uvsq.fr/adminsite/scripts/libs/ie8-shims.js"></script>
+<![endif]-->
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.uvsq.fr/wro/styles/1cdbcbd84b1a5b24bb8f930211ccfac6d0f2343c.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.uvsq.fr/wro/styles_uvsq/85db77d62e13cb46be13f72e182ac86516a17d1f.css"/>
+
+
+    <script type="text/javascript">
+        var html = document.getElementsByTagName('html')[0];
+        html.className = html.className.replace('no-js', 'js');
+        // document.getElementsByTagName("html")[0].className = document.getElementsByTagName("html")[0].className.replace("no-js", "js");
     </script>
+    
+    <script type="text/javascript" src="https://www.uvsq.fr/wro/scriptsCnil_fr_FR/15c6e2adacb929715e6941826a8b0ba08411a681.js"></script>
+    <script type="text/javascript">
+        CookieCNIL.init('UA-3566402-18');
+        CookieCNIL.launchWithConsent();
+    </script>
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.uvsq.fr/wro/jQueryCSS/4f09505c023ee9faad90b029013642f69c694251.css"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script type="text/javascript" src="https://www.uvsq.fr/wro/scripts/7560f8b1366da2014a0c844dab48d9c69aae49e0.js"></script>
+    <script type="text/javascript" src="https://www.uvsq.fr/adminsite/scripts/libs/ckeditor/ckeditor.js"></script><link rel="stylesheet" type="text/css" media="print" href="https://www.uvsq.fr/wro/styles-print/3c3ffec044417b0d2c4aee5dd8276fd557fc4a15.css"/>
+    
+
+
+
+
+
+<style type="text/css" media="screen, print">
+    /*  remplacer par variable bandeau (de site) usine à sites */
+    #bandeau {
+    }
+    h2::after, .h2::after {
+        background-color: #007ba4;
+    }
+
+    .paragraphe__titre--2 {
+        background-color: #007ba4;
+    }
+
+    ::-moz-selection {
+        background: #007ba4;
+    }
+
+    ::-webkit-selection {
+        background: #007ba4;
+    }
+
+    ::selection {
+        background: #007ba4;
+    }
+    ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder, ::placeholder {
+        color: #007ba4;
+        opacity: 1;
+    }
+
+    .style_bouton, .style_bouton .lien_externe, .style_bouton .lien_interne {
+        background-color: #007ba4;
+    }
+
+    .icon {
+        color: #007ba4;
+    }
+
+    .js .plier-deplier__bouton:hover .icon {
+        color: #007ba4;
+    }
+
+    #acces-directs .plier-deplier__bouton {
+        color: #007ba4;
+    }
+
+    @media screen and (min-width: 980px) {
+        #profil_uvsq .plier-deplier__bouton {
+            color: #007ba4;
+        }
+    }
+
+    #acces-directs .plier-deplier::after {
+        color: #007ba4;
+    }
+
+    #acces-directs .type_rubrique_n3 a {
+        color: #007ba4;
+    }
+
+    #versions li a, #versions li::after {
+        color: #007ba4;
+    }
+
+    #recherche-simple {
+        background: #007ba4;
+    }
+
+    #pied_page_complement, #pied_page_complement a {
+        color: #007ba4;
+    }
+
+    .cartouche .zone-sociale__liste li a span {
+        background: #007ba4;
+    }
+
+    header .cartouche .banniere__baseline {
+        color: #007ba4;
+    }
+
+    #menu {
+        background: #007ba4;
+    }
+
+    #menu_principal.menu_principal--riche > li > a:hover {
+        color: #007ba4;
+    }
+
+    #menu_principal .type_rubrique_UVSQNEWS:hover span , #menu_principal .type_rubrique_VIECAMPUS:hover span {
+        color: #007ba4 !important;
+    }
+
+    #menu_principal.menu_principal--riche > li.menu_principal--ouvert > a, #menu_principal.menu_principal--riche > li:hover > a, #menu_principal .plier-deplier__contenu a, #menu_principal .plier-deplier__contenu span,
+    #menu_principal.menu_principal--riche .menu_principal-actif > a, #menu_principal.menu_principal--riche .menu_principal-actif > span {
+        color: #007ba4;
+    }
+
+    #menu_principal.menu_principal--riche > li.menu_principal--ouvert > a {
+      color: #007ba4 !important;
+    }
+
+    .js #menu .mobile-menu__level-close-button {
+      background-color: #007ba4;
+    }
+
+    .js #menu .mobile-menu__item > button:hover {
+      color: #007ba4 !important;
+    }
+
+    .js #menu .menu_principal__colonne ul {
+      border-left-color: #007ba4;
+    }
+
+    #body #fil_ariane a::before {
+        color: #007ba4;
+    }
+
+    form.formulaire_redacteur p.obligatoire label {
+        color: #007ba4;
+    }
+
+    form.formulaire_redacteur p.obligatoire input, form.formulaire_redacteur p.obligatoire textarea, form.formulaire_redacteur p.obligatoire select {
+        border-color: #007ba4;
+    }
+
+    #encadres .encadre_fiche.encadre--2 .encadre__titre {
+        color: #007ba4;
+    }
+
+    [class^="liste-definitions__terme"], dl, .fiche .contenu > table th {
+        color: #007ba4;
+    }
+
+    .fiche.formation .onglets .onglets__item.onglets__item--actif, .fiche.formation .onglets .onglets__item:hover, .fiche.formation .onglets .onglets__item a:hover {
+        background: #007ba4;
+    }
+
+    .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+        background: #007ba4;
+    }
+
+    #body.ficheaccueil .toolboxCard ul.objets li, #body.ficheaccueil .grandeToolboxCard ul.objets li, ul.objets li.style_accueil {
+        border-color: #72b6cc
+    }
+
+    .owl-controls .owl-controls-wrapper button,
+    .galerieSimple .pagination_droite, .galerieSimple .pagination_gauche {
+        background-color: #007ba4;
+    }
+
+    .couleur-primaire-secondaire .style_bouton .lien_externe:hover,
+    .couleur-primaire-secondaire .style_bouton .lien_interne:hover {
+        color: #007ba4 !important;
+        border: 1px solid #007ba4;
+        padding-right: 1.944444444em;
+        padding-left: 1.944444444em;
+    }
+
+    #menu_principal .menu_principal-actif.VIECAMPUS > a, #menu_principal .menu_principal-actif.VIECAMPUS > a span {
+        background-color: #007ba4 !important;
+    }
+    
+    a, .a, a:active, .a:active, a:focus, .a:focus, .isLink::before, a:visited, .a:visited {
+        color: #007ba4;
+    }
+
+    h1, .h1 {
+        color: #007ba4;
+    }
+
+    .encadre--3,
+    .paragraphe--3 {
+        background-color: #007ba4;
+    }
+
+    .js #haut_page a:focus {
+        outline: 1px dotted #007ba4;
+    }
+
+    .actions-fiche > * a:active, .actions-fiche > * a:focus {
+        outline: 1px dotted #007ba4;
+    }
+
+    #body #menu .mobile-menu__level__titre > a, #body #menu .mobile-menu__level__titre > span {
+        color: #007ba4 !important;
+    }
+
+    button {
+        color: #007ba4;
+    }
+
+    button:focus, button:active {
+        outline: 1px dotted #007ba4;
+    }
+
+    #menu_principal .menu_principal-actif.UVSQNEWS > a, #menu_principal .menu_principal-actif.UVSQNEWS > a span {
+        background-color: #007ba4 !important;
+    }
+
+
+    #body .agendaCard .dateEvnt {
+        color: #007ba4;
+    }
+
+    #body .agendaCard {
+        color: #007ba4;
+    }
+
+    #body .agendaCard .bloc_agenda li {
+        border-color: #007ba4;
+    }
+
+    #body .card_titre {
+        background: #007ba4;
+    }
+
+    #body.ficheaccueil h3 {
+        color: #007ba4;
+    }
+
+    #body .toolboxCard ul li {
+        border-top-color: #007ba4;
+    }
+
+    #body .rechercheFormationCard__voir_aussi li::before {
+        color: #007ba4;
+    }
+
+    .search__button, .topic__see-more, .topic__see-less, .toggle-topics, .button_wrapper, #page input[type="button"], #page input[type="submit"], #page input[type="reset"], #page .button, #page .reset, #page .submit, .search-homesection__button-submit{
+        background: #007ba4;
+    }
+
+    .encadre--3 .button_wrapper .submit,
+    .paragraphe--3 .button_wrapper .submit {
+        color: #007ba4 !important;
+    }
+
+    .fiche.formation .onglets .onglets__item {
+        background: #007ba4;
+    }
+
+    .onglets-section__bouton:hover, .onglets-section.onglets-section--actif .onglets-section__bouton {
+        background: #007ba4;
+    }
+
+    .kscrollable li span, .kscrollable li button {
+        color: #007ba4;
+    }
+
+    .fiche.actualite .bloc_photo__complement {
+        color: #007ba4;
+    }
+
+    #recherche-simple input[type="submit"] {
+        background: #007ba4;
+    }
+
+    ul.objets li.style_accueil > a > h3 {
+        color: #007ba4;
+    }
+
+    .liste-fiche--titre {
+        color: #007ba4 !important;
+    }
+
+    #body .vignette_multicolonne .date {
+        background: #007ba4;
+    }
+
+    @media screen and (max-width: 979px) {
+        #body #profil_uvsq button.plier-deplier__bouton {
+            background: #007ba4;
+        }
+    }
+
+    #body.ficheaccueil .portraitsCard,
+    #body.ficheaccueil .portraitsCard::before,
+    #body.ficheaccueil .portraitsCard::after {
+        background-color: #007ba4;
+    }
+
+    #body.ficheaccueil .dernieresAcquisitionsCard {
+        background-color: #007ba4;
+        color: #464646;
+    }
+
+    #body.ficheaccueil .dernieresAcquisitionscard_content .desc a{
+        color: #007ba4;
+    }
+    #body.ficheaccueil .dernieresAcquisitionscard_content .desc span{
+        color: #464646;
+    }
+
+    ul.objets > li.style_agenda .date-agenda {
+        background: #007ba4;
+    }
+
+     .style_bouton .lien_externe:hover,
+     .style_bouton .lien_interne:hover {
+        background-color: #007ba4;
+        -webkit-background-color: #007ba4;
+        -moz-webkit-background-color: #007ba4;
+        cursor: pointer;
+    }
+
+    
+    #menu_principal .UVSQNEWS > a , #menu_principal .VIECAMPUS > a {
+        background-color: #464646;
+    }
+
+    #body .card_lien,
+    #body .card_lien a {
+        color: #464646;
+    }
+
+    #body .lienCard a {
+        color: #464646;
+    }
+
+    #body.ficheaccueil .carrousel .carrousel--contenu .owl-item .carrousel-deco .infos .infos-wrapper h2 a {
+        background-color: rgba(70,70,70,0.8);
+    }
+
+    #body.ficheaccueil .carrousel .carrousel--contenu .owl-item .carrousel-deco .infos .infos-wrapper h2 a:focus,
+    #body.ficheaccueil .carrousel .carrousel--contenu .owl-item .carrousel-deco .infos .infos-wrapper h2 a:hover {
+        background-color: rgba(70,70,70,1.0);
+    }
+
+    #body.ficheaccueil .layout__slot--columnspan2 .toolboxCard .toolboxCard__title {
+        border-bottom-color: #464646;
+    }
+    #body.ficheaccueil .layout__slot--columnspan2 .archivesHALCard .archivesHALcard_header .archivesHALcard__titre {
+        border-bottom-color: #464646;
+    }
+    #body.ficheaccueil .layout__slot--columnspan2 .archivesHALCard .archivesHALcard_content #archivesOuvertesCard--hal__value {
+        color: #007ba4;
+    }
+
+    #body.ficheaccueil .layout__simple-grid--siteUvsqAccueil .layout__slot--columnspan2 .toolboxCard .toolboxCard__title,
+    #body.ficheaccueil .layout__simple-grid--siteUvsqAccueil .layout__slot--columnspan2 .archivesHALCard  .archivesHALcard_header .archivesHALcard__titre {
+        border-bottom-color: #007ba4;
+    }
+
+    #body.ficheaccueil .layout__simple-grid--siteUvsqAccueil .agendaCard .date-big {
+        color: #007ba4;
+    }
+    #body.ficheaccueil .layout__simple-grid--siteUvsqAccueil .agendaCard .card_lien a {
+        color: #007ba4;
+    }
+    #body.ficheaccueil .layout__simple-grid--siteUvsqAccueil .carrousel .carrousel--contenu .owl-item .carrousel-deco .infos .infos-wrapper h3 a {
+        background-color: #007ba4;
+    }
+
+    #body.ficheaccueil .date-big {
+        color: #464646;
+    }
+
+    #body.ficheaccueil .rechercheFormationCard .button_wrapper {
+        background-color: #464646;
+    }
+
+    .fiche.actualite .bloc_photo__date_complement_wrapper > div::before {
+        color: #464646;
+    }
+
+    .results-annuaire__other-structures {
+      color: #464646;
+    }
+
+    #body .menu_principal__accroche li {
+        border-color: #464646;
+    }
+
+    .formation__lmd__domaine {
+        background-color: #464646;
+    }
+    #encadres .encadre_fiche.encadre--1 .encadre__titre, #complements .complements__titre {
+        background-color: #007ba4;
+    }
+    .encadre_fiche .formation_pdf {
+        background-color: #007ba4;
+    }
+
+    .results-annuaire__item-other-structure {
+      color: #007ba4;
+    }
+
+    
+</style>
+<style type="text/css" media="print">
+    
+    .fiche h2{
+        color: #007ba4;
+        border-color: #007ba4;
+    }
+
+    .formation .formation__lmd__domaine--pdf{
+        background: #007ba4;
+    }
+    
+</style>
+
+    <link rel="start" title="Accueil" href="https://www.uvsq.fr/" />
+
+    
+    <link rel="alternate" type="application/rss+xml" title="" href="https://www.uvsq.fr/adminsite/webservices/export_rss.jsp?NOMBRE=10&amp;CODE_RUBRIQUE=aaaaa&amp;LANGUE=0" />
+</head>
+    <body id="body" class="fiche ficheaccueil accueil couleur-primaire-secondaire">
+<a class="evitement" href="#contenu-encadres">Aller au contenu</a>
+    
+    
+        <img class="bandeau_formation" src="/uas/ksup/BANDEAU_FORMATION/bandeau-offre-formation-fiche-newlogo.png" alt=""/>
+    
+<header role="banner">
+    <div id="bandeau_outils">
+        <div>
+            <p id="acces_direct">
+                <a href="#contenu_sans_nav_sans_encadres"></a> |
+                <a href="#menu_principal"></a> |
+                <a href="#acces_directs"></a>  |
+                <a href="#connexion"></a>
+            </p>
+            <button id="menu-principal-bouton" class="plier-deplier__bouton" aria-label="Menu" aria-expanded="false "aria-controls="menu-principal">
+                <span class="css-icon-menu"></span>
+                <span class="icon-libelle sr-only"></span>
+            </button>
+            <div class="font-size">
+                <button type="button" data-font-size="100" aria-label="A (police taille normal)">A</button>
+                <button type="button" data-font-size="120" aria-label="A+ (police taille grande)">A+</button>
+                <button type="button" data-font-size="140" aria-label="A++ (police taille très grande)">A++</button>
+            </div>
+            
+
+
+
+
+
+
+
+	<div id="versions" >
+		<ul>
+			    <li class="versions__item versions_en"  lang="en">
+	                
+                   	  <a href="https://www.uvsq.fr/english" aria-label="ENGLISH" hreflang="en">
+                        en
+                      </a>
+                </li>
+			    <li class="versions__item versions_fr"  lang="fr">
+	                
+                   	  <a href="https://www.uvsq.fr/" aria-label="Français" hreflang="fr">
+                        fr
+                      </a>
+                </li>
+		</ul>
+	</div>
+	
+            
+
+
+
+
+    <div id="profil_uvsq" class="plier-deplier">
+            <button class="plier-deplier__bouton" aria-expanded="false">
+                <span>
+                    Vous êtes
+                </span>
+            </button>
+            <div class="plier-deplier__contenu plier-deplier__contenu--clos clearfix">
+                <ul>
+                        <li class=" type_rubrique_n2">
+                                <a href="https://www.uvsq.fr/futur·e-etudiant·e">Futur étudiant</a>
+                        </li>
+                        <li class=" type_rubrique_n2">
+                                <a href="https://www.uvsq.fr/etudiant·e-international·e">Étudiant international</a>
+                        </li>
+                        <li class=" type_rubrique_n2">
+                                <a href="https://www.uvsq.fr/alumni">Alumni</a>
+                        </li>
+                        <li class=" type_rubrique_n2">
+                                <a href="https://www.uvsq.fr/chercheur·e-enseignant·e-chercheur·e">Chercheur | Enseignant-Chercheur</a>
+                        </li>
+                        <li class=" type_rubrique_n2">
+                                <a href="https://www.uvsq.fr/entreprise-partenaire">Entreprise | Partenaire</a>
+                        </li>
+                        <li class=" type_rubrique_n2">
+                                <a href="https://www.uvsq.fr/journaliste">Journaliste</a>
+                        </li>
+                        <li class=" type_rubrique_n2">
+                                <a href="https://www.uvsq.fr/adulte-en-recherche-de-formation">Adulte en recherche de formation</a>
+                        </li>
+                </ul>
+            </div><!-- .plier-deplier__contenu -->
+    </div><!-- #profil_uvsq -->
+
+            
+
+
+
+
+
+
+
+
+
+<div id="recherche-simple" role="search" class="plier-deplier">
+	<button class="plier-deplier__bouton" aria-expanded="false">
+		<span aria-hidden="true" class="icon icon-search"></span>
+		<span class="icon-libelle">Recherche</span>
+	</button>
+	<div class="plier-deplier__contenu plier-deplier__contenu--clos" itemscope itemtype="http://schema.org/WebSite">
+		<meta itemprop="url" content="https://www.uvsq.fr/"/>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form id="formRechercheSimple" action="/search" method="get" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction" class="search-form search-form--default">
+    <meta itemprop="target" content="/search?beanKey=&l=0&q={q}"/>
+    
+    
+    
+    <input type="hidden" name="l" value="0"/>
+    <input type="hidden" name="RH" value="aaaaa"/>
+    
+    
+    <input type="hidden" name="rechercheCloisonneeAnnuaireValue" value="beanKeyRechercheAnnuaireksup">
+    <div>
+        <span>
+            <input type="radio" name="beanKey" id="rechercheCloissonneAnnuaire-false" value="150bfcee-1f87-11e7-a0e0-b753bedcad22" checked="checked"/>
+            <label style="display: inline;" for="rechercheCloissonneAnnuaire-false">Tout le site</label>
+        </span>
+        <span>
+            <input type="radio" name="beanKey" id="rechercheCloissonneAnnuaire-true" value="beanKeyRechercheAnnuaireksup" />
+            <label style="display: inline;" for="rechercheCloissonneAnnuaire-true">Annuaire</label>
+        </span>
+    </div>
+    <input itemprop="query-input" name="q" type="text" id="default-MOTS_CLEFS" value="" placeholder="Mot-clé" aria-label="Recherche par mots-clés"/>
+    <input type="submit" value="Rechercher" aria-label="Lancer la recherche" />
+</form>
+
+<script type="text/javascript" src="https://www.uvsq.fr/wro/scripts_search/7d71cbd25e8690631e71cce0a5d851e461c10e8a.js"></script>
+
+	</div><!-- .plier-deplier__contenu -->
+</div><!-- #recherche-simple .plier-deplier -->
+
+        </div><!-- -->
+    </div> <!-- #bandeau_outils -->
+
+    <div class="cartouche">
+        <div>
+            
+
+
+
+
+
+
+
+
+
+
+<div class="banniere clearfix" role="banner">
+    <div class="banniere__logos banniere__logos__1">
+        <div class="banniere__logo banniere__logo__desktop">
+            
+            <a href="https://www.uvsq.fr/" title="Retour à la page d'accueil">
+                <img src="/uas/ksup/LOGO/logo-UVSQ-2020-RVB.png" alt="UVSQ | Université Paris-Saclay | Aller à la page d'accueil"/>
+            </a>
+            
+        </div>
+        <div class="banniere__logo banniere__logo__mobile">
+            
+            <a href="https://www.uvsq.fr/" title="Retour à la page d'accueil">
+                <img src="/uas/ksup/LOGO_MOBILE/logo-UVSQ-2020-RVB.png" alt="logo-UVSQ" title="Retour à la page d'accueil"/>
+            </a>
+            
+        </div>
+        <div class="banniere__logo banniere__logo__desktop">
+            <!-- Logo secondaire -->
+            
+                
+                
+        </div>
+        <div class="banniere__logo banniere__logo__desktop">
+            <!-- Logo tertiaire -->
+            
+                
+                
+        </div>
+    </div>
+    <div class="banniere_baseline_reseaux">
+        <div class="banniere__baselines">
+            
+            
+            <div class="banniere__baseline__complement">Université de Versailles Saint-Quentin-en-Yvelines
+            </div>
+            
+        </div>
+        
+
+
+
+
+
+	<div class="zone-sociale">
+		<div>
+			<span class="zone-sociale__libelle">Suivez-nous sur</span>
+			<ul class="zone-sociale__liste">
+			
+				<li class="zone-sociale__item">
+					<a href="https://www.uvsq.fr/reseau-alumni-de-luvsq" class="zone-sociale__type-rubrique_0004" target="_blank">
+						<span>
+							<img src="/medias/photo/capture-d-e-cran-2023-04-28-a-10-12-41_1683024203048-png" alt="Réseau Alumni de l'UVSQ" />
+						</span>
+					</a>
+				</li>
+			
+				<li class="zone-sociale__item">
+					<a href="https://www.uvsq.fr/instagram" class="zone-sociale__type-rubrique_0004" target="_blank">
+						<span>
+							<img src="/medias/photo/logo-instagram-petit_1658231733004-jpg" alt="Instagram de l'UVSQ" />
+						</span>
+					</a>
+				</li>
+			
+				<li class="zone-sociale__item">
+					<a href="https://www.uvsq.fr/youtube" class="zone-sociale__type-rubrique_0004" target="_blank">
+						<span>
+							<img src="/medias/photo/logo-youtube-png-rond-2_1658231801828-jpg" alt="Youtube de l'UVSQ" />
+						</span>
+					</a>
+				</li>
+			
+				<li class="zone-sociale__item">
+					<a href="https://www.uvsq.fr/tiktok-de-luvsq" class="zone-sociale__type-rubrique_0004" target="_blank">
+						<span>
+							<img src="/medias/photo/capture-d-e-cran-2024-03-05-a-11-52-04_1709636081045-png" alt="TikTok de l'UVSQ" />
+						</span>
+					</a>
+				</li>
+			
+				<li class="zone-sociale__item">
+					<a href="https://www.uvsq.fr/linkedin" class="zone-sociale__type-rubrique_0004" target="_blank">
+						<span>
+							<img src="/medias/photo/logo-linkedin-petit_1658231764229-jpg" alt="Linkedin de l'UVSQ" />
+						</span>
+					</a>
+				</li>
+			
+				<li class="zone-sociale__item">
+					<a href="https://www.uvsq.fr/facebook" class="zone-sociale__type-rubrique_0004" target="_blank">
+						<span>
+							<img src="/medias/photo/logo-blue-fond-blanc-petit_1658231713794-jpg" alt="Facebook de l'UVSQ" />
+						</span>
+					</a>
+				</li>
+			
+				<li class="zone-sociale__item">
+					<a href="https://www.uvsq.fr/twitter" class="zone-sociale__type-rubrique_0004" target="_blank">
+						<span>
+							<img src="/medias/photo/logo-x-twitter_1693571373699-jpg" alt="X de l'UVSQ" />
+						</span>
+					</a>
+				</li>
+			
+			</ul>
+		</div>
+	</div><!-- .zone-sociale -->
+
+    </div>
+</div>
+<!-- .banniere -->
+        </div><!-- / -->
+    </div><!-- .cartouche -->
+
+    <!--     <div id="menu" role="navigation" class="plier-deplier__contenu--clos" aria-expanded="false"> -->
+    
+    <!--         <div class="separateur"></div> -->
+    <!--     </div> #menu -->
+
+
+    <nav id="menu" role="navigation" class="plier-deplier__contenu--clos" aria-expanded="false" aria-label="Menu principal">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul id="menu_principal" class="menu_principal--riche mobile-menu__level js-mobile-menu__level">
+        <li class="close-button-main"></li>
+            
+            
+                
+        <li class="menu_principal-actif   
+				 			mobile-menu__item js-mobile-menu__item menu__level--0
+				 			mobile-menu__item--intranet">
+                
+            
+                <img src="/jsp/styles/img/picto-acces-direct.png" alt="Accès direct" title="Accès direct" width="11px"/>
+            
+                
+            
+                
+                
+                
+                    
+                    <a href="https://www.uvsq.fr/etudiants" class="menu_n1_desktop type_rubrique_intranet item__control-level-0" aria-expanded="false"
+                       role="button">Etudiants</a>
+                    
+                    <a href="https://www.uvsq.fr/etudiants"
+                       class="menu_n1_mobile type_rubrique_intranet item__control-level-0" aria-expanded="false"
+                       role="button" >Etudiants</a>
+                
+                
+            
+                
+            
+        </li>
+                    
+                    
+                
+            
+                
+        <li class="menu_principal-actif   
+				 			mobile-menu__item js-mobile-menu__item menu__level--0
+				 			mobile-menu__item--intranet">
+                
+            
+                <img src="/jsp/styles/img/picto-acces-direct.png" alt="Accès direct" title="Accès direct" width="11px"/>
+            
+                
+            
+                
+                
+                
+                    
+                    <a href="https://www.uvsq.fr/personnels-2" class="menu_n1_desktop type_rubrique_intranet item__control-level-0" aria-expanded="false"
+                       role="button">Personnels</a>
+                    
+                    <a href="https://www.uvsq.fr/personnels-2"
+                       class="menu_n1_mobile type_rubrique_intranet item__control-level-0" aria-expanded="false"
+                       role="button" >Personnels</a>
+                
+                
+            
+                
+            
+        </li>
+                    
+                    
+                
+            
+                
+            
+                
+        <li class="menu_principal-actif   
+				 			mobile-menu__item js-mobile-menu__item menu__level--0
+				 			mobile-menu__item--nav">
+                
+            
+                
+            
+                
+                
+                
+                    
+                    <a href="https://www.uvsq.fr/luvsq" class="menu_n1_desktop type_rubrique_nav item__control-level-0" aria-expanded="false"
+                       role="button">L'UVSQ</a>
+                    
+                    <a href="#"
+                       class="menu_n1_mobile type_rubrique_nav item__control-level-0" aria-expanded="false"
+                       role="button" data-toggle="dropdown">L'UVSQ</a>
+                
+                
+            
+                
+            
+                <div class="plier-deplier__contenu plier-deplier__contenu--clos dropdown-menu data-toggle-target mobile-menu__level  menu__level--1"
+                     role="menu">
+                    
+                    
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            <li class="mobile-menu__level__titre">
+                                <a href="https://www.uvsq.fr/luvsq">L'UVSQ</a>
+                            </li>
+                            
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/decouvrir-luvsq" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Découvrir l'UVSQ</a>
+                                <a href="https://www.uvsq.fr/decouvrir-luvsq" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Découvrir l'UVSQ</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/informations-pratiques" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Les campus</a>
+                                <a href="https://www.uvsq.fr/informations-pratiques" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Les campus</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/organisation" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Organisation</a>
+                                <a href="https://www.uvsq.fr/organisation" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Organisation</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/engagements" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Engagements</a>
+                                <a href="https://www.uvsq.fr/engagements" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Engagements</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/france-2030" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">L'UVSQ dans France 2030</a>
+                                <a href="https://www.uvsq.fr/france-2030" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">L'UVSQ dans France 2030</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/recrutement" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Recrutement</a>
+                                <a href="https://www.uvsq.fr/recrutement" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Recrutement</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/contacts-9" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Contacts</a>
+                                <a href="https://www.uvsq.fr/contacts-9" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Contacts</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/actualites-de-luniversite" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Actualités de l'université</a>
+                                <a href="https://www.uvsq.fr/actualites-de-luniversite" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Actualités de l'université</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/evenements-a-venir-1" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Événements à venir</a>
+                                <a href="https://www.uvsq.fr/evenements-a-venir-1" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Événements à venir</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/uvsqnews-la-newsletter" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">UVSQnews, la newsletter</a>
+                                <a href="https://www.uvsq.fr/uvsqnews-la-newsletter" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">UVSQnews, la newsletter</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/uvsq-la-revue" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">UVSQ la revue</a>
+                                <a href="https://www.uvsq.fr/uvsq-la-revue" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">UVSQ la revue</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/fondation-uvsq-2" class="menu_n1_desktop type_rubrique_0004 item__control-level-1">La Fondation UVSQ</a>
+                                <a href="https://www.uvsq.fr/fondation-uvsq-2" class="menu_n1_mobile type_rubrique_0004 item__control-level-1">La Fondation UVSQ</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/universite-paris-saclay-3" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">L'Université Paris-Saclay</a>
+                                <a href="https://www.uvsq.fr/universite-paris-saclay-3" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">L'Université Paris-Saclay</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne menu_principal__accroche">
+                        
+                    </div>
+                </div>
+            
+        </li>
+                    
+                    
+                        
+                    
+                
+            
+                
+        <li class="menu_principal-actif   
+				 			mobile-menu__item js-mobile-menu__item menu__level--0
+				 			mobile-menu__item--nav">
+                
+            
+                
+            
+                
+                
+                
+                    
+                    <a href="https://www.uvsq.fr/formation" class="menu_n1_desktop type_rubrique_nav item__control-level-0" aria-expanded="false"
+                       role="button">Formation</a>
+                    
+                    <a href="#"
+                       class="menu_n1_mobile type_rubrique_nav item__control-level-0" aria-expanded="false"
+                       role="button" data-toggle="dropdown">Formation</a>
+                
+                
+            
+                
+            
+                <div class="plier-deplier__contenu plier-deplier__contenu--clos dropdown-menu data-toggle-target mobile-menu__level  menu__level--1"
+                     role="menu">
+                    
+                    
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            <li class="mobile-menu__level__titre">
+                                <a href="https://www.uvsq.fr/formation">Formation</a>
+                            </li>
+                            
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/panorama-de-la-formation" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">La formation à l'UVSQ</a>
+                                <a href="https://www.uvsq.fr/panorama-de-la-formation" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">La formation à l'UVSQ</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/offre-de-formations" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Toutes les formations</a>
+                                <a href="https://www.uvsq.fr/offre-de-formations" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Toutes les formations</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/actualites-de-la-formation" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Actualités de la formation</a>
+                                <a href="https://www.uvsq.fr/actualites-de-la-formation" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Actualités de la formation</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/jpo-salons-1" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">JPO, salons</a>
+                                <a href="https://www.uvsq.fr/jpo-salons-1" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">JPO, salons</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/ateliers-webinaires" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Ateliers, webinaires</a>
+                                <a href="https://www.uvsq.fr/ateliers-webinaires" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Ateliers, webinaires</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/ue-libres" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">UE libres, valoriser ses compétences</a>
+                                <a href="https://www.uvsq.fr/ue-libres" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">UE libres, valoriser ses compétences</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/formation-continue-2" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Formation continue</a>
+                                <a href="https://www.uvsq.fr/formation-continue-2" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Formation continue</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/candidatures-et-inscriptions" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Candidatures et inscriptions</a>
+                                <a href="https://www.uvsq.fr/candidatures-et-inscriptions" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Candidatures et inscriptions</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/orientation-parcours-detudes" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Orientation et réorientation</a>
+                                <a href="https://www.uvsq.fr/orientation-parcours-detudes" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Orientation et réorientation</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/insertion-professionnelle" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Stages et insertion professionnelle</a>
+                                <a href="https://www.uvsq.fr/insertion-professionnelle" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Stages et insertion professionnelle</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/entrepreunariat-etudiant" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Entrepreneuriat étudiant</a>
+                                <a href="https://www.uvsq.fr/entrepreunariat-etudiant" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Entrepreneuriat étudiant</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/le-campus-icm" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Le campus ICM</a>
+                                <a href="https://www.uvsq.fr/le-campus-icm" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Le campus ICM</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne menu_principal__accroche">
+                        
+                    </div>
+                </div>
+            
+        </li>
+                    
+                    
+                        
+                    
+                
+            
+                
+        <li class="menu_principal-actif   
+				 			mobile-menu__item js-mobile-menu__item menu__level--0
+				 			mobile-menu__item--nav">
+                
+            
+                
+            
+                
+                
+                
+                    
+                    <a href="https://www.uvsq.fr/recherche" class="menu_n1_desktop type_rubrique_nav item__control-level-0" aria-expanded="false"
+                       role="button">Recherche</a>
+                    
+                    <a href="#"
+                       class="menu_n1_mobile type_rubrique_nav item__control-level-0" aria-expanded="false"
+                       role="button" data-toggle="dropdown">Recherche</a>
+                
+                
+            
+                
+            
+                <div class="plier-deplier__contenu plier-deplier__contenu--clos dropdown-menu data-toggle-target mobile-menu__level  menu__level--1"
+                     role="menu">
+                    
+                    
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            <li class="mobile-menu__level__titre">
+                                <a href="https://www.uvsq.fr/recherche">Recherche</a>
+                            </li>
+                            
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/decouvrir-la-recherche" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">La recherche à l'UVSQ</a>
+                                <a href="https://www.uvsq.fr/decouvrir-la-recherche" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">La recherche à l'UVSQ</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/actualites-de-la-recherche-innovation" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Actualités de la recherche, innovation</a>
+                                <a href="https://www.uvsq.fr/actualites-de-la-recherche-innovation" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Actualités de la recherche, innovation</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/la-recherche-et-linnovation-en-video" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">La recherche et l’innovation en vidéo</a>
+                                <a href="https://www.uvsq.fr/la-recherche-et-linnovation-en-video" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">La recherche et l’innovation en vidéo</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/uvsqresearch-la-lettre-de-la-recherche" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">UVSQResearch, la newsletter</a>
+                                <a href="https://www.uvsq.fr/uvsqresearch-la-lettre-de-la-recherche" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">UVSQResearch, la newsletter</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/structures-de-recherche" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Laboratoires, structures de recherche</a>
+                                <a href="https://www.uvsq.fr/structures-de-recherche" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Laboratoires, structures de recherche</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/doctorat" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Doctorat</a>
+                                <a href="https://www.uvsq.fr/doctorat" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Doctorat</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/hdr" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Habilitation à diriger des recherches</a>
+                                <a href="https://www.uvsq.fr/hdr" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Habilitation à diriger des recherches</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/panorama-de-la-recherche" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Dossiers, publications, distinctions</a>
+                                <a href="https://www.uvsq.fr/panorama-de-la-recherche" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Dossiers, publications, distinctions</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/ecosysteme-de-la-recherche" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Ecosystème de la recherche</a>
+                                <a href="https://www.uvsq.fr/ecosysteme-de-la-recherche" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Ecosystème de la recherche</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/innovation-et-start-up" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Innovation et start-up</a>
+                                <a href="https://www.uvsq.fr/innovation-et-start-up" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Innovation et start-up</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne menu_principal__accroche">
+                        
+                    </div>
+                </div>
+            
+        </li>
+                    
+                    
+                        
+                    
+                
+            
+                
+        <li class="menu_principal-actif   
+				 			mobile-menu__item js-mobile-menu__item menu__level--0
+				 			mobile-menu__item--nav">
+                
+            
+                
+            
+                
+                
+                
+                    
+                    <a href="https://www.uvsq.fr/international-1" class="menu_n1_desktop type_rubrique_nav item__control-level-0" aria-expanded="false"
+                       role="button">International</a>
+                    
+                    <a href="#"
+                       class="menu_n1_mobile type_rubrique_nav item__control-level-0" aria-expanded="false"
+                       role="button" data-toggle="dropdown">International</a>
+                
+                
+            
+                
+            
+                <div class="plier-deplier__contenu plier-deplier__contenu--clos dropdown-menu data-toggle-target mobile-menu__level  menu__level--1"
+                     role="menu">
+                    
+                    
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            <li class="mobile-menu__level__titre">
+                                <a href="https://www.uvsq.fr/international-1">International</a>
+                            </li>
+                            
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/linternational-a-luvsq" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">L'international à l'UVSQ</a>
+                                <a href="https://www.uvsq.fr/linternational-a-luvsq" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">L'international à l'UVSQ</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/actualites-internationales" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Actualités internationales</a>
+                                <a href="https://www.uvsq.fr/actualites-internationales" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Actualités internationales</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/partir-a-letranger" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Partir en mobilité à l'étranger</a>
+                                <a href="https://www.uvsq.fr/partir-a-letranger" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Partir en mobilité à l'étranger</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/enseigner-chercher-a-letranger" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Enseigner | Chercher à l'étranger</a>
+                                <a href="https://www.uvsq.fr/enseigner-chercher-a-letranger" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Enseigner | Chercher à l'étranger</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/venir-a-luvsq" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Venir étudier à l'UVSQ</a>
+                                <a href="https://www.uvsq.fr/venir-a-luvsq" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Venir étudier à l'UVSQ</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/developper-une-cooperation" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Projets européens et internationaux</a>
+                                <a href="https://www.uvsq.fr/developper-une-cooperation" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Projets européens et internationaux</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/partenariats-internationaux" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Partenariats internationaux</a>
+                                <a href="https://www.uvsq.fr/partenariats-internationaux" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Partenariats internationaux</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/classements" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Classements</a>
+                                <a href="https://www.uvsq.fr/classements" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Classements</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne menu_principal__accroche">
+                        
+                    </div>
+                </div>
+            
+        </li>
+                    
+                    
+                        
+                    
+                
+            
+                
+        <li class="menu_principal-actif   
+				 			mobile-menu__item js-mobile-menu__item menu__level--0
+				 			mobile-menu__item--nav">
+                
+            
+                
+            
+                
+                
+                
+                    
+                    <a href="https://www.uvsq.fr/entreprise" class="menu_n1_desktop type_rubrique_nav item__control-level-0" aria-expanded="false"
+                       role="button">Entreprise</a>
+                    
+                    <a href="#"
+                       class="menu_n1_mobile type_rubrique_nav item__control-level-0" aria-expanded="false"
+                       role="button" data-toggle="dropdown">Entreprise</a>
+                
+                
+            
+                
+            
+                <div class="plier-deplier__contenu plier-deplier__contenu--clos dropdown-menu data-toggle-target mobile-menu__level  menu__level--1"
+                     role="menu">
+                    
+                    
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            <li class="mobile-menu__level__titre">
+                                <a href="https://www.uvsq.fr/entreprise">Entreprise</a>
+                            </li>
+                            
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/loffre-aux-entreprises" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">L'offre aux entreprises</a>
+                                <a href="https://www.uvsq.fr/loffre-aux-entreprises" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">L'offre aux entreprises</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/actualites-entreprise" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Actualités Entreprise</a>
+                                <a href="https://www.uvsq.fr/actualites-entreprise" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Actualités Entreprise</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/former-vos-collaborateurs" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Former vos collaborateurs</a>
+                                <a href="https://www.uvsq.fr/former-vos-collaborateurs" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Former vos collaborateurs</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/developper-votre-ri" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Développer votre R&I</a>
+                                <a href="https://www.uvsq.fr/developper-votre-ri" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Développer votre R&I</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/recruter-nos-etudiants-et-diplomes" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Recruter nos étudiants et diplômés</a>
+                                <a href="https://www.uvsq.fr/recruter-nos-etudiants-et-diplomes" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Recruter nos étudiants et diplômés</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/developper-votre-marque-employeur" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Développer votre marque employeur</a>
+                                <a href="https://www.uvsq.fr/developper-votre-marque-employeur" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Développer votre marque employeur</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/collaborer-autrement" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Marchés publics, location d'espaces</a>
+                                <a href="https://www.uvsq.fr/collaborer-autrement" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Marchés publics, location d'espaces</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/taxe-dapprentissage" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Taxe d'apprentissage</a>
+                                <a href="https://www.uvsq.fr/taxe-dapprentissage" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Taxe d'apprentissage</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne menu_principal__accroche">
+                        
+                    </div>
+                </div>
+            
+        </li>
+                    
+                    
+                        
+                    
+                
+            
+                
+        <li class="menu_principal-actif   VIECAMPUS 
+				 			mobile-menu__item js-mobile-menu__item menu__level--0
+				 			mobile-menu__item--VIECAMPUS">
+                
+            
+                
+            
+                
+                
+                    <!-- ancien -->
+                    
+                    <a href="https://www.uvsq.fr/vie-de-campus" class="menu_n1_desktop type_rubrique_VIECAMPUS item__control-level-0" aria-expanded="false"
+                       role="button"><span>Vie de campus</span></a>
+                    
+                    <a href="#" class="menu_n1_mobile type_rubrique_VIECAMPUS item__control-level-0" aria-expanded="false"
+                       role="button" data-toggle="dropdown">Vie de campus</a>
+                
+                
+                
+            
+                
+            
+                <div class="plier-deplier__contenu plier-deplier__contenu--clos dropdown-menu data-toggle-target mobile-menu__level  menu__level--1"
+                     role="menu">
+                    
+                    
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            <li class="mobile-menu__level__titre">
+                                <a href="https://www.uvsq.fr/vie-de-campus">Vie de campus</a>
+                            </li>
+                            
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/actualites-de-la-vie-etudiante" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Actualités étudiantes</a>
+                                <a href="https://www.uvsq.fr/actualites-de-la-vie-etudiante" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Actualités étudiantes</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/agenda" class="menu_n1_desktop type_rubrique_0500 item__control-level-1">Agenda vie étudiante</a>
+                                <a href="https://www.uvsq.fr/agenda" class="menu_n1_mobile type_rubrique_0500 item__control-level-1">Agenda vie étudiante</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/les-medias-etudiants" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Médias étudiants</a>
+                                <a href="https://www.uvsq.fr/les-medias-etudiants" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Médias étudiants</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/guide-etudiant" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Guide étudiant</a>
+                                <a href="https://www.uvsq.fr/guide-etudiant" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Guide étudiant</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/ma-scolarite" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Scolarité</a>
+                                <a href="https://www.uvsq.fr/ma-scolarite" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Scolarité</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/outils-numeriques-2" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Outils numériques</a>
+                                <a href="https://www.uvsq.fr/outils-numeriques-2" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Outils numériques</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/les-espaces-vie-etudiante" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Maison de l’Etudiant et lieux de vie</a>
+                                <a href="https://www.uvsq.fr/les-espaces-vie-etudiante" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Maison de l’Etudiant et lieux de vie</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/aides-etudiantes" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Aides étudiantes</a>
+                                <a href="https://www.uvsq.fr/aides-etudiantes" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Aides étudiantes</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/sante-securite-sociale" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Santé</a>
+                                <a href="https://www.uvsq.fr/sante-securite-sociale" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Santé</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/accompagnement-du-handicap" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Handicap</a>
+                                <a href="https://www.uvsq.fr/accompagnement-du-handicap" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Handicap</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/lutte-contre-les-harcelements-1" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Lutte contre les harcèlements</a>
+                                <a href="https://www.uvsq.fr/lutte-contre-les-harcelements-1" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Lutte contre les harcèlements</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/job-alternance-emploi" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Job, alternance, emploi</a>
+                                <a href="https://www.uvsq.fr/job-alternance-emploi" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Job, alternance, emploi</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/cvec" class="menu_n1_desktop type_rubrique_0004 item__control-level-1">Projets étudiants</a>
+                                <a href="https://www.uvsq.fr/cvec" class="menu_n1_mobile type_rubrique_0004 item__control-level-1">Projets étudiants</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/le-crous-1" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Services du CROUS</a>
+                                <a href="https://www.uvsq.fr/le-crous-1" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Services du CROUS</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/restauration" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Restauration</a>
+                                <a href="https://www.uvsq.fr/restauration" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Restauration</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/logement" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Logement</a>
+                                <a href="https://www.uvsq.fr/logement" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Logement</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/culture" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Culture</a>
+                                <a href="https://www.uvsq.fr/culture" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Culture</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/vie-sportive" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Sport</a>
+                                <a href="https://www.uvsq.fr/vie-sportive" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Sport</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/vie-associative-et-projets-etudiants" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Associations</a>
+                                <a href="https://www.uvsq.fr/vie-associative-et-projets-etudiants" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Associations</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/reseau-alumni-uvsq-1" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Réseau alumni UVSQ</a>
+                                <a href="https://www.uvsq.fr/reseau-alumni-uvsq-1" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Réseau alumni UVSQ</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/elections-et-elus-etudiants" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Élections et élus étudiants</a>
+                                <a href="https://www.uvsq.fr/elections-et-elus-etudiants" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Élections et élus étudiants</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/engagement-etudiant" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Engagement étudiant</a>
+                                <a href="https://www.uvsq.fr/engagement-etudiant" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Engagement étudiant</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne menu_principal__accroche">
+                        <a class="lien_interne" href="https://www.uvsq.fr/etudiants">                <img src="https://www.uvsq.fr/medias/photo/pastille-intranet-etu-final_1665489366049-png?ID_FICHE=5939" alt="" style="width: 120px; height: 120px; margin: 4px 5px; float: none;">    </a><br>
+<a class="lien_externe" href="http://www.jaiunprojet.uvsq.fr/">                <img src="https://www.uvsq.fr/medias/photo/pastille-projets-e-tudiants_1694511880802-png?ID_FICHE=5939" alt="projets étudiants www.jaiunprojet.uvsq.fr" style="width: 120px; height: 120px; margin: 4px 5px; float: none;">    </a>
+                    </div>
+                </div>
+            
+        </li>
+                    
+                    
+                
+            
+                
+        <li class="menu_principal-actif   
+				 			mobile-menu__item js-mobile-menu__item menu__level--0
+				 			mobile-menu__item--acces">
+                
+            
+                
+            
+                
+                
+                
+                    
+                    <a href="https://www.uvsq.fr/ufr-instituts" class="menu_n1_desktop type_rubrique_acces item__control-level-0" aria-expanded="false"
+                       role="button">UFR  | Instituts</a>
+                    
+                    <a href="#"
+                       class="menu_n1_mobile type_rubrique_acces item__control-level-0" aria-expanded="false"
+                       role="button" data-toggle="dropdown">UFR  | Instituts</a>
+                
+                
+            
+                
+            
+                <div class="plier-deplier__contenu plier-deplier__contenu--clos dropdown-menu data-toggle-target mobile-menu__level  menu__level--1"
+                     role="menu">
+                    
+                    
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            <li class="mobile-menu__level__titre">
+                                <a href="https://www.uvsq.fr/ufr-instituts">UFR  | Instituts</a>
+                            </li>
+                            
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                
+                                <span class="item__control-level-1">10 composantes</span>
+                                
+                                
+                                
+                                <ul class="second-menu mobile-menu__level js-mobile-menu__level" role="menu">
+                                    <li class="mobile-menu__level__titre">
+                                        <a href="">10 composantes</a>
+                                    </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/faculte-de-droit-et-de-science-politique"
+                                                       class="type_rubrique_0004 item__control-level-1">Faculté de droit et de science politique</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/ieci"
+                                                       class="type_rubrique_0004 item__control-level-1">IECI</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/ism-iae"
+                                                       class="type_rubrique_0004 item__control-level-1">ISM-IAE</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/isty-ecole-dingenieurs"
+                                                       class="type_rubrique_0004 item__control-level-1">ISTY École d'Ingénieurs</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/iut-de-mantes"
+                                                       class="type_rubrique_0004 item__control-level-1">IUT de Mantes</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/iut-de-velizy-rambouillet"
+                                                       class="type_rubrique_0004 item__control-level-1">IUT de Vélizy - Rambouillet</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/ovsq"
+                                                       class="type_rubrique_0004 item__control-level-1">OVSQ</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/ufr-des-sciences"
+                                                       class="type_rubrique_0004 item__control-level-1">UFR des sciences</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/ufr-des-sciences-sociales"
+                                                       class="type_rubrique_0004 item__control-level-1">UFR des sciences sociales</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/ufr-simone-veil-sante"
+                                                       class="type_rubrique_0004 item__control-level-1">UFR Simone Veil - santé</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                </ul>
+                                
+                                    
+                                
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne menu_principal__accroche">
+                        
+                    </div>
+                </div>
+            
+        </li>
+                    
+                    
+                
+            
+                
+        <li class="menu_principal-actif   
+				 			mobile-menu__item js-mobile-menu__item menu__level--0
+				 			mobile-menu__item--acces">
+                
+            
+                
+            
+                
+                
+                
+                    
+                    <a href="https://www.uvsq.fr/bibliotheques" class="menu_n1_desktop type_rubrique_acces item__control-level-0" aria-expanded="false"
+                       role="button">Bibliothèques</a>
+                    
+                    <a href="#"
+                       class="menu_n1_mobile type_rubrique_acces item__control-level-0" aria-expanded="false"
+                       role="button" data-toggle="dropdown">Bibliothèques</a>
+                
+                
+            
+                
+            
+                <div class="plier-deplier__contenu plier-deplier__contenu--clos dropdown-menu data-toggle-target mobile-menu__level  menu__level--1"
+                     role="menu">
+                    
+                    
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            <li class="mobile-menu__level__titre">
+                                <a href="https://www.uvsq.fr/bibliotheques">Bibliothèques</a>
+                            </li>
+                            
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                
+                                <span class="item__control-level-1">Un campus, une BU</span>
+                                
+                                
+                                
+                                <ul class="second-menu mobile-menu__level js-mobile-menu__level" role="menu">
+                                    <li class="mobile-menu__level__titre">
+                                        <a href="">Un campus, une BU</a>
+                                    </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/le-portail-des-bibliotheques"
+                                                       class="type_rubrique_0004 item__control-level-1">Le portail des bibliothèques</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/bu-de-saint-quentin-yvelines"
+                                                       class="type_rubrique_0004 item__control-level-1">BU de Saint-Quentin-Yvelines</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/bu-de-versailles"
+                                                       class="type_rubrique_0004 item__control-level-1">BU de Versailles</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/bu-de-boulogne"
+                                                       class="type_rubrique_0004 item__control-level-1">BU de Boulogne</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/bu-de-mantes"
+                                                       class="type_rubrique_0004 item__control-level-1">BU de Mantes</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/bu-de-rambouillet"
+                                                       class="type_rubrique_0004 item__control-level-1">BU de Rambouillet</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/bu-de-velizy"
+                                                       class="type_rubrique_0004 item__control-level-1">BU de Vélizy</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/bibliotheques-associees"
+                                                       class="type_rubrique_0004 item__control-level-1">Bibliothèques associées</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="mobile-menu__item js-mobile-menu__item">
+                                            
+                                                
+                                                    <a href="https://www.uvsq.fr/bibliotheques-paris-saclay"
+                                                       class="type_rubrique_0004 item__control-level-1">Bibliothèques Paris-Saclay</a>
+                                                
+                                                
+                                            
+                                        </li>
+                                    
+                                </ul>
+                                
+                                    
+                                
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne menu_principal__accroche">
+                        
+                    </div>
+                </div>
+            
+        </li>
+                    
+                    
+                
+            
+                
+        <li class="menu_principal-actif   
+				 			mobile-menu__item js-mobile-menu__item menu__level--0
+				 			mobile-menu__item--profuvsq">
+                
+            
+                
+            
+                
+                
+                
+                
+                    <a href="#" type="button" class="item__control-level-0 align-chevron" data-toggle="dropdown">
+                            Vous êtes
+                    </a>
+                
+            
+                
+            
+                <div class="plier-deplier__contenu plier-deplier__contenu--clos dropdown-menu data-toggle-target mobile-menu__level  menu__level--1"
+                     role="menu">
+                    
+                    
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            <li class="mobile-menu__level__titre">
+                                <a href="">Vous êtes</a>
+                            </li>
+                            
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/futur·e-etudiant·e" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Futur étudiant</a>
+                                <a href="https://www.uvsq.fr/futur·e-etudiant·e" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Futur étudiant</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/etudiant·e-international·e" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Étudiant international</a>
+                                <a href="https://www.uvsq.fr/etudiant·e-international·e" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Étudiant international</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/alumni" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Alumni</a>
+                                <a href="https://www.uvsq.fr/alumni" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Alumni</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/chercheur·e-enseignant·e-chercheur·e" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Chercheur | Enseignant-Chercheur</a>
+                                <a href="https://www.uvsq.fr/chercheur·e-enseignant·e-chercheur·e" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Chercheur | Enseignant-Chercheur</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne">
+                        <ul>
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/entreprise-partenaire" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Entreprise | Partenaire</a>
+                                <a href="https://www.uvsq.fr/entreprise-partenaire" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Entreprise | Partenaire</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/journaliste" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Journaliste</a>
+                                <a href="https://www.uvsq.fr/journaliste" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Journaliste</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                            
+                            <li class="mobile-menu__item js-mobile-menu__item">
+                                
+                                
+                                <a href="https://www.uvsq.fr/adulte-en-recherche-de-formation" class="menu_n1_desktop type_rubrique_0001 item__control-level-1">Adulte en recherche de formation</a>
+                                <a href="https://www.uvsq.fr/adulte-en-recherche-de-formation" class="menu_n1_mobile type_rubrique_0001 item__control-level-1">Adulte en recherche de formation</a>
+                                
+                                
+                                
+                                
+                                    
+                                
+                        </ul>
+                    </div>
+                    <div class="menu_principal__colonne menu_principal__accroche">
+                        
+                    </div>
+                </div>
+            
+        </li>
+                    
+                    
+                
+            </ul>
+
+
+
+        <div class="separateur"></div>
+    </nav> <!-- #menu -->
+</header>
+
+<main id="page" role="main">
+    <div id="page_deco">
+        <div id="contenu-encadres" tabindex="-1">
+            <div id="contenu_sans_nav_sans_encadres" class="contenu" role="main">
+                    
+
+
+
+
+<div class="layout">
+    <div class="layout layout__simple-grid layout__simple-grid--siteCom js-layout"><div class="layout__slot layout__slot--filled layout__gridSlot layout__slot--columnspan4 layout__slot--rowspan2 layout__slot--0x0 js-layout__slot">
+    
+
+
+
+
+
+
+
+
+        <div class="carrousel ">
+                <div class="carrousel--titre">
+                    <h2>L'UVSQ en images</h2>
+                </div>
+            <div class="carrousel--contenu">
+                <div class="carrousel-viewer owl-carousel owl-theme ">
+                            <div class="item">
+                                <a href="https://www.uvsq.fr/jpo-salons-1">
+                                    <div class="img" style="background-image:url('/medias/photo/jpo2025-bandeau-slide_1733904387299-jpg')"></div>
+                                </a> <!-- Règle fonctionnelle : Pour que le titre et le résumé n’apparaissent pas sur le bandeau, le titre de la fiche lien commencera par un « # » -->
+                                    <div class="carrousel-deco">
+                                        <div class="infos">
+                                            <div class="infos-wrapper">
+                                                <div class="infos-wrapper2">
+                                                    <h2><a href="https://www.uvsq.fr/jpo-salons-1">Venez découvrir nos formations post-bac lors de nos JPO 2025</a></h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="item">
+                                <a href="https://www.uvsq.fr/fermeture-de-fin-dannee">
+                                    <div class="img" style="background-image:url('/medias/photo/bonnes-fetes-fermeture-2025-bandeau_1734344420496-jpg')"></div>
+                                </a> <!-- Règle fonctionnelle : Pour que le titre et le résumé n’apparaissent pas sur le bandeau, le titre de la fiche lien commencera par un « # » -->
+                                    <div class="carrousel-deco">
+                                        <div class="infos">
+                                            <div class="infos-wrapper">
+                                                <div class="infos-wrapper2">
+                                                    <h2><a href="https://www.uvsq.fr/fermeture-de-fin-dannee">L'UVSQ sera fermée du 21 décembre au 5 janvier inclus.</a></h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="item">
+                                <a href="https://www.uvsq.fr/1-100-km-en-antarctique-pour-mieux-comprendre-levolution-de-la-calotte-glaciaire">
+                                    <div class="img" style="background-image:url('/medias/photo/awaka_1734604030760-png')"></div>
+                                </a> <!-- Règle fonctionnelle : Pour que le titre et le résumé n’apparaissent pas sur le bandeau, le titre de la fiche lien commencera par un « # » -->
+                                    <div class="carrousel-deco">
+                                        <div class="infos">
+                                            <div class="infos-wrapper">
+                                                <div class="infos-wrapper2">
+                                                    <h2><a href="https://www.uvsq.fr/1-100-km-en-antarctique-pour-mieux-comprendre-levolution-de-la-calotte-glaciaire">1 100 km en Antarctique pour mieux comprendre l’évolution de la calotte glaciaire</a></h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+</div><div class="layout__slot layout__slot--filled layout__gridSlot layout__slot--columnspan2  layout__slot--2x0 js-layout__slot">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card videoCard">
+        <h2 class="videoCard__titre card_titre">3 minutes pour découvrir l'UVSQ</h2>
+    <div class="videoCard_video video_externe">
+                <iframe src="https://www.youtube.com/embed/66frcG-vE1o?feature=shared" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__gridSlot   layout__slot--2x2 js-layout__slot">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card rechercheFormationCard">
+    <div class="rechercheFormationCard--block">
+        <div class="rechercheFormationCard--info">
+            <h2 class="card_titre">Trouver une formation</h2>
+            <div class="rechercheFormationCard--content">
+                <form class="tag-formation" action="https://www.uvsq.fr/search" method="get" >
+                    <input type="hidden" name="l" value="0" />
+                    <input type="hidden" name="beanKey" value="150bfcee-1f87-11e7-a0e0-b753bedcad22" />
+                    <input type="hidden" name="RH" value="VF" />
+                    <input type="hidden" name="types" value="formation" />
+                    <p>
+                        <label class="sr-only" for="rechercheFormationCard_libelle">
+                            intitulé ou mot-clé
+                        </label>
+                        <input type="text" name="q" id="rechercheFormationCard_libelle"
+                               placeholder="intitulé ou mot-clé" title="intitulé ou mot-clé"/>
+                    </p>
+                    
+                    <p>
+                        <label class="sr-only" for="rechercheFormationCard_nivDipl">
+                            Sélectionner le diplôme
+                        </label>
+                        <select name="nivDipl" id="rechercheFormationCard_nivDipl">
+                            <option value="">Type de diplôme
+                            </option>
+                            <option value="AU" >DAEU (Diplôme d'accès aux études universitaires)</option><option value="CAPA" >Capacité</option><option value="DIU" >DIU (Diplôme inter-universitaire)</option><option value="DR" >Diplôme d'Ingénieur</option><option value="DT" >BUT (Bachelor universitaire de technologie)</option><option value="DU" >DU (Diplôme d'université)</option><option value="LI" >Licence</option><option value="LR" >Licence professionnelle</option><option value="M1" >Master 1ère année</option><option value="M2" >Master 2e année</option><option value="MED" >Diplôme de Médecine</option><option value="MVOEDGB6" >Certificat d'université</option><option value="PC" >Préparation aux concours</option><option value="PZ76LZ6H" >Diplôme d'État</option><option value="doc" >Doctorat</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label class="sr-only" for="rechercheFormationCard_disc">
+                            Sélectionner une disipline
+                        </label>
+                        <select name="disc" id="rechercheFormationCard_disc">
+                            <option value="">Discipline
+                            </option>
+                            <option value="0AO69ZD5" >Réseaux télécom et sécurité</option><option value="ACM" >Ingénierie de la culture et multimédia</option><option value="ALL" >Allemand</option><option value="ANG" >Anglais</option><option value="AYQT2Q6S" >Management</option><option value="BIO" >Biologie</option><option value="CG" >Culture Générale</option><option value="CHIM" >Chimie</option><option value="COM" >Communication</option><option value="DT PRI" >Droit Privé</option><option value="DT PUB" >Droit Public</option><option value="ECO" >Economie</option><option value="ELEC" >Electricité</option><option value="ELECTRO" >Electronique</option><option value="ENS" >Métiers de l'enseignement</option><option value="ENV" >Environnement et développement durable</option><option value="ESP" >Espagnol</option><option value="FRAN" >Français</option><option value="GE" >Géologie</option><option value="GEO" >Géographie</option><option value="GEST" >Gestion</option><option value="GWSF40RY" >Cosmétique</option><option value="HIST" >Histoire</option><option value="INF" >Informatique</option><option value="KOSHSY65" >Génie civil</option><option value="LET" >Lettres</option><option value="MARKETIN" >Marketing</option><option value="MATH" >Mathématiques</option><option value="MECA" >Mécanique</option><option value="MUS" >Musicologie</option><option value="PHY" >Physique</option><option value="SC PO" >Science Politique</option><option value="SOCIO" >Sociologie</option><option value="SPI" >Sciences de l'Ingénieur</option><option value="STAPS" > Sciences du sport</option><option value="STATS" >Statistiques</option><option value="WZUWVWW6" >Physique et chimie des matériaux</option><option value="commerce" >Commerce</option><option value="logis" >Logistique</option><option value="medec" >Médecine et santé</option><option value="parfum" >Parfumerie</option><option value="pluri" >Pluridisciplinaire</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label class="sr-only" for="rechercheFormationCard_structure">
+                            Sélectionner un institut
+                        </label>
+                        <select name="structure" id="rechercheFormationCard_structure">
+                            <option value="">UFR ou institut
+                            </option>
+                            
+                            <option value="11" >Observatoire de Versailles St-Quentin-en-Yvelines
+                            </option>
+                            
+                            <option value="01" >UFR des sciences
+                            </option>
+                            
+                            <option value="02" >UFR des sciences sociales
+                            </option>
+                            
+                            <option value="03" >ISM-IAE - Institut supérieur de management
+                            </option>
+                            
+                            <option value="04" >IECI - Institut d'études culturelles et internationales
+                            </option>
+                            
+                            <option value="06" >Faculté de droit et science politique
+                            </option>
+                            
+                            <option value="07" >UFR Simone Veil - santé
+                            </option>
+                            
+                            <option value="08" >ISTY - Institut des sciences et techniques des Yvelines
+                            </option>
+                            
+                            <option value="09" >IUT de Vélizy-Rambouillet
+                            </option>
+                            
+                            <option value="10" >IUT de Mantes en Yvelines
+                            </option>
+                            
+                        </select>
+                    </p>
+                    <p class="recherche_formation_validation">
+                        <input class="bouton bouton-submit" type="submit" value="Chercher" />
+                    </p>
+                </form>
+            </div>
+            <div class="card_lien">
+            </div>
+        </div>
+    </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__gridSlot   layout__slot--2x3 js-layout__slot">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card agendaCard">
+        <h2 class="agendaCard__title card_titre">Agenda</h2>
+    <ul class="bloc_agenda">
+                <li>
+                    <a href="https://www.uvsq.fr/de-venus-a-la-nasa-visite-astronomique-au-chateau-de-versailles" class="bloc_agenda-item">
+                        <span class="bloc_agenda-date">
+                                <span class="date-big">
+                                    <span class="date-big__date">21</span>
+                                    <span class="date-big__month">déc</span>
+                                </span>
+                        </span>
+                        <span class="bloc_agenda-titre">
+                            <span class="titreEvnt">De Vénus à la NASA : visite astronomique au château de Versailles</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.uvsq.fr/sante-consultation-avec-une-dieteticienne" class="bloc_agenda-item">
+                        <span class="bloc_agenda-date">
+                                <span class="date-big">
+                                    <span class="date-big__date">10</span>
+                                    <span class="date-big__month">janv</span>
+                                </span>
+                        </span>
+                        <span class="bloc_agenda-titre">
+                            <span class="titreEvnt">[Santé] Consultation avec une diététicienne</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.uvsq.fr/reunion-dinformation-vae-11-decembre-2024-1" class="bloc_agenda-item">
+                        <span class="bloc_agenda-date">
+                                <span class="date-big">
+                                    <span class="date-big__date">10</span>
+                                    <span class="date-big__month">janv</span>
+                                </span>
+                        </span>
+                        <span class="bloc_agenda-titre">
+                            <span class="titreEvnt">Réunion d'information VAE - 10 janvier 2025</span>
+                        </span>
+                    </a>
+                </li>
+    </ul>
+        <div class="card_lien">
+            <a href="https://www.uvsq.fr/evenements-a-venir-1">
+                Evénements à venir
+            </a>
+        </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__dragNDropSlot   layout__slot--3x0 js-layout__slot">
+    
+
+
+
+
+
+
+<div class="card focusCard">
+    <div class="focuscard_header">
+            <h2 class="focuscard__titre card_titre">Campus</h2>
+        <a class="focuscard_image" href="https://www.uvsq.fr/jpo-salons-1" style="background-image: url('/medias/photo/jpo2025_1733395245250-png');">
+                <img src="/medias/photo/jpo2025_1733395245250-png" alt="" />
+                <span style="background-image: url('/medias/photo/jpo2025_1733395245250-png')"></span>
+        </a>
+    </div>
+    <div class="focuscard_content">
+        <div class="focuscard_content">
+                <h3 class="focuscard__sous-titre card_sous-titre">
+                    <a href="https://www.uvsq.fr/jpo-salons-1">
+                        JPO, salons... : les dates clés pour s'informer et découvrir l'UVSQ
+                    </a>
+                </h3>
+                <p class="focuscard__resume card_resume">Voici le programme 2024-2025 des salons et journées portes ouvertes : des temps sont prévus pour venir vous informer sur les formations universitaires, rencontrer des enseignants et des étudiants...</p>
+        </div>
+    </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__dragNDropSlot   layout__slot--3x1 js-layout__slot">
+    
+
+
+
+
+
+
+<div class="card focusCard">
+    <div class="focuscard_header">
+            <h2 class="focuscard__titre card_titre">Campus</h2>
+        <a class="focuscard_image" href="https://www.uvsq.fr/le-pass-uvsqlture-des-tarifs-avantageux-chez-15-partenaires" style="background-image: url('/medias/photo/stickre-2024-2025-grand-format_1728305019338-jpg');">
+                <img src="/medias/photo/stickre-2024-2025-grand-format_1728305019338-jpg" alt="" />
+                <span style="background-image: url('/medias/photo/stickre-2024-2025-grand-format_1728305019338-jpg')"></span>
+        </a>
+    </div>
+    <div class="focuscard_content">
+        <div class="focuscard_content">
+                <h3 class="focuscard__sous-titre card_sous-titre">
+                    <a href="https://www.uvsq.fr/le-pass-uvsqlture-des-tarifs-avantageux-chez-15-partenaires">
+                        Le Pass UVSQ'lture : des tarifs avantageux chez 15 partenaires !
+                    </a>
+                </h3>
+                <p class="focuscard__resume card_resume">Profitez des avantages du pass UVSQ'lture : 6 € les places de concerts / spectacles / théâtre et 3,5 € les séances de cinéma.</p>
+        </div>
+    </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__dragNDropSlot   layout__slot--3x2 js-layout__slot">
+    
+
+
+
+
+
+
+<div class="card focusCard">
+    <div class="focuscard_header">
+            <h2 class="focuscard__titre card_titre">Campus</h2>
+        <a class="focuscard_image" href="https://www.uvsq.fr/ateliers-pour-booster-votre-candidature" style="background-image: url('/medias/photo/ateliers-oip_1728396197481-png');">
+                <img src="/medias/photo/ateliers-oip_1728396197481-png" alt="" />
+                <span style="background-image: url('/medias/photo/ateliers-oip_1728396197481-png')"></span>
+        </a>
+    </div>
+    <div class="focuscard_content">
+        <div class="focuscard_content">
+                <h3 class="focuscard__sous-titre card_sous-titre">
+                    <a href="https://www.uvsq.fr/ateliers-pour-booster-votre-candidature">
+                        Ateliers pour booster votre candidature
+                    </a>
+                </h3>
+                <p class="focuscard__resume card_resume">Pour préparer votre candidature (relecture CV, lettre de motivation, préparation à l'entretien, valorisation des soft skills), nous vous proposons des ateliers collectifs.</p>
+        </div>
+    </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__dragNDropSlot   layout__slot--3x3 js-layout__slot">
+    
+
+
+
+
+
+
+<div class="card focusCard">
+    <div class="focuscard_header">
+            <h2 class="focuscard__titre card_titre">Campus</h2>
+        <a class="focuscard_image" href="https://www.uvsq.fr/trouver-un-stage-grace-au-reseau-alumni-de-luvsq" style="background-image: url('/medias/photo/reseau-alumni-rs-page-4_1719841699656-jpg');">
+                <img src="/medias/photo/reseau-alumni-rs-page-4_1719841699656-jpg" alt="" />
+                <span style="background-image: url('/medias/photo/reseau-alumni-rs-page-4_1719841699656-jpg')"></span>
+        </a>
+    </div>
+    <div class="focuscard_content">
+        <div class="focuscard_content">
+                <h3 class="focuscard__sous-titre card_sous-titre">
+                    <a href="https://www.uvsq.fr/trouver-un-stage-grace-au-reseau-alumni-de-luvsq">
+                        Trouver un stage grâce au réseau alumni de l'UVSQ
+                    </a>
+                </h3>
+                <p class="focuscard__resume card_resume">Plus de 100 offres de stage ! Découvrez toutes les offres proposées par les entreprises partenaires sur le réseau alumni de l'UVSQ.</p>
+        </div>
+    </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__dragNDropSlot   layout__slot--4x0 js-layout__slot">
+    
+
+
+
+
+
+
+<div class="card focusCard">
+    <div class="focuscard_header">
+            <h2 class="focuscard__titre card_titre">L'UVSQ</h2>
+        <a class="focuscard_image" href="https://www.uvsq.fr/sommet-pour-laction-sur-lintelligence-artificielle" style="background-image: url('/medias/photo/logowebsommetia_1734617767066-png');">
+                <img src="/medias/photo/logowebsommetia_1734617767066-png" alt="" />
+                <span style="background-image: url('/medias/photo/logowebsommetia_1734617767066-png')"></span>
+        </a>
+    </div>
+    <div class="focuscard_content">
+        <div class="focuscard_content">
+                <h3 class="focuscard__sous-titre card_sous-titre">
+                    <a href="https://www.uvsq.fr/sommet-pour-laction-sur-lintelligence-artificielle">
+                        Sommet pour l’action sur l’Intelligence Artificielle
+                    </a>
+                </h3>
+                <p class="focuscard__resume card_resume">Le laboratoire Dante (UVSQ, Paris-Saclay) participe au Sommet pour l’action sur l’Intelligence Artificielle, organisé par l’Elysée, par un colloque labellisé lors des événements parallèles officiels.</p>
+        </div>
+    </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__dragNDropSlot   layout__slot--4x1 js-layout__slot">
+    
+
+
+
+
+
+
+<div class="card focusCard">
+    <div class="focuscard_header">
+            <h2 class="focuscard__titre card_titre">L'UVSQ</h2>
+        <a class="focuscard_image" href="https://www.uvsq.fr/luvsq-participe-a-la-3e-edition-du-deeptech-tour" style="background-image: url('/medias/photo/visueldeeptechtour2025-parissaclay12_1734616250822-png');">
+                <img src="/medias/photo/visueldeeptechtour2025-parissaclay12_1734616250822-png" alt="" />
+                <span style="background-image: url('/medias/photo/visueldeeptechtour2025-parissaclay12_1734616250822-png')"></span>
+        </a>
+    </div>
+    <div class="focuscard_content">
+        <div class="focuscard_content">
+                <h3 class="focuscard__sous-titre card_sous-titre">
+                    <a href="https://www.uvsq.fr/luvsq-participe-a-la-3e-edition-du-deeptech-tour">
+                        L'UVSQ participe à la 3e édition du DeepTech Tour
+                    </a>
+                </h3>
+                <p class="focuscard__resume card_resume">Le Deeptech Tour fait étape sur les campus porteurs d’un Pôle Universitaire d’Innovation, dont l’Université Paris-Saclay fait partie. La startup Oligofeed et la Direction de la valorisation de l'UVSQ seront présentes.</p>
+        </div>
+    </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__dragNDropSlot   layout__slot--4x2 js-layout__slot">
+    
+
+
+
+
+
+
+<div class="card focusCard">
+    <div class="focuscard_header">
+            <h2 class="focuscard__titre card_titre">L'UVSQ</h2>
+        <a class="focuscard_image" href="https://www.uvsq.fr/loic-josseran-est-elu-president-de-luvsq" style="background-image: url('/medias/photo/loic-josseran-act-scaled_1734472901108-jpg');">
+                <img src="/medias/photo/loic-josseran-act-scaled_1734472901108-jpg" alt="" />
+                <span style="background-image: url('/medias/photo/loic-josseran-act-scaled_1734472901108-jpg')"></span>
+        </a>
+    </div>
+    <div class="focuscard_content">
+        <div class="focuscard_content">
+                <h3 class="focuscard__sous-titre card_sous-titre">
+                    <a href="https://www.uvsq.fr/loic-josseran-est-elu-president-de-luvsq">
+                        Loïc Josseran, Président de l’UVSQ
+                    </a>
+                </h3>
+                <p class="focuscard__resume card_resume">Le Professeur Loïc Josseran a été élu par le Conseil d'Administration pour un mandat de 4 ans le 2 décembre 2024.</p>
+        </div>
+    </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__dragNDropSlot   layout__slot--4x3 js-layout__slot">
+    
+
+
+
+
+
+
+<div class="card focusCard">
+    <div class="focuscard_header">
+            <h2 class="focuscard__titre card_titre">L'UVSQ</h2>
+        <a class="focuscard_image" href="https://www.uvsq.fr/luniversite-paris-saclay-met-fin-a-son-activite-sur-le-reseau-social-x" style="background-image: url('/medias/photo/n-5-janvier-25-re-ussir-ensemble-_1734618466527-png');">
+                <img src="/medias/photo/n-5-janvier-25-re-ussir-ensemble-_1734618466527-png" alt="" />
+                <span style="background-image: url('/medias/photo/n-5-janvier-25-re-ussir-ensemble-_1734618466527-png')"></span>
+        </a>
+    </div>
+    <div class="focuscard_content">
+        <div class="focuscard_content">
+                <h3 class="focuscard__sous-titre card_sous-titre">
+                    <a href="https://www.uvsq.fr/luniversite-paris-saclay-met-fin-a-son-activite-sur-le-reseau-social-x">
+                        L’Université Paris-Saclay met fin à son activité sur le réseau social X
+                    </a>
+                </h3>
+                <p class="focuscard__resume card_resume">L’UVSQ s’associe au mouvement mais s’inscrit dans une trajectoire progressive lui permettant de préparer cette sortie avec sa communauté universitaire. Retrouvez-nous sur Bluesky : @uvsq.bsky.social</p>
+        </div>
+    </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__dragNDropSlot   layout__slot--5x0 js-layout__slot">
+    
+
+
+
+
+
+
+<div class="card focusCard">
+    <div class="focuscard_header">
+            <h2 class="focuscard__titre card_titre">Recherche</h2>
+        <a class="focuscard_image" href="https://www.uvsq.fr/a-la-recherche-dun-traitement-contre-la-myopathie-de-duchenne" style="background-image: url('/medias/photo/sqytherapeuticsnov2024_1732207062193-png');">
+                <img src="/medias/photo/sqytherapeuticsnov2024_1732207062193-png" alt="" />
+                <span style="background-image: url('/medias/photo/sqytherapeuticsnov2024_1732207062193-png')"></span>
+        </a>
+    </div>
+    <div class="focuscard_content">
+        <div class="focuscard_content">
+                <h3 class="focuscard__sous-titre card_sous-titre">
+                    <a href="https://www.uvsq.fr/a-la-recherche-dun-traitement-contre-la-myopathie-de-duchenne">
+                        À la recherche d'un traitement contre la myopathie de Duchenne
+                    </a>
+                </h3>
+                <p class="focuscard__resume card_resume">La société SQY Therapeutics issue d'une équipe de recherche du laboratoire END-ICAP qui travaille à trouver un traitement contre la myopathie de Duchenne a lancé un essai clinique depuis un an.</p>
+        </div>
+    </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__dragNDropSlot   layout__slot--5x1 js-layout__slot">
+    
+
+
+
+
+
+
+<div class="card focusCard">
+    <div class="focuscard_header">
+            <h2 class="focuscard__titre card_titre">Recherche</h2>
+        <a class="focuscard_image" href="https://www.uvsq.fr/quand-la-science-rencontre-lart-le-cas-du-blanc-de-zinc" style="background-image: url('/medias/photo/zinc-ipanema_1732532856873-png');">
+                <img src="/medias/photo/zinc-ipanema_1732532856873-png" alt="" />
+                <span style="background-image: url('/medias/photo/zinc-ipanema_1732532856873-png')"></span>
+        </a>
+    </div>
+    <div class="focuscard_content">
+        <div class="focuscard_content">
+                <h3 class="focuscard__sous-titre card_sous-titre">
+                    <a href="https://www.uvsq.fr/quand-la-science-rencontre-lart-le-cas-du-blanc-de-zinc">
+                        Quand la science rencontre l’art : le cas du blanc de zinc
+                    </a>
+                </h3>
+                <p class="focuscard__resume card_resume">Dans le monde de la conservation des œuvres d’art, une infime particule de peinture blanche peut révéler des secrets artistiques séculaires.</p>
+        </div>
+    </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__dragNDropSlot   layout__slot--5x2 js-layout__slot">
+    
+
+
+
+
+
+
+<div class="card focusCard">
+    <div class="focuscard_header">
+            <h2 class="focuscard__titre card_titre">Recherche</h2>
+        <a class="focuscard_image" href="https://www.uvsq.fr/focus-sur-le-projet-activate" style="background-image: url('/medias/photo/moine-photo_1734106843073-JPG');">
+                <img src="/medias/photo/moine-photo_1734106843073-JPG" alt="" />
+                <span style="background-image: url('/medias/photo/moine-photo_1734106843073-JPG')"></span>
+        </a>
+    </div>
+    <div class="focuscard_content">
+        <div class="focuscard_content">
+                <h3 class="focuscard__sous-titre card_sous-titre">
+                    <a href="https://www.uvsq.fr/focus-sur-le-projet-activate">
+                        Focus sur le projet ACTIVATE
+                    </a>
+                </h3>
+                <p class="focuscard__resume card_resume">Porté par l'UVSQ, ACTIVATE est un projet de réseau européen autour des archives de l’engagement militant en Europe, du XIXe à nos jours, porté par Caroline Moine, directrice du CHCSC.</p>
+        </div>
+    </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__dragNDropSlot   layout__slot--5x3 js-layout__slot">
+    
+
+
+
+
+
+
+<div class="card focusCard">
+    <div class="focuscard_header">
+            <h2 class="focuscard__titre card_titre">Recherche</h2>
+        <a class="focuscard_image" href="#2" style="background-image: url('/medias/photo/axeawaca-clementolivier_1733410369125-png');">
+                <img src="/medias/photo/axeawaca-clementolivier_1733410369125-png" alt="" />
+                <span style="background-image: url('/medias/photo/axeawaca-clementolivier_1733410369125-png')"></span>
+        </a>
+    </div>
+    <div class="focuscard_content">
+        <div class="focuscard_content">
+                <h3 class="focuscard__sous-titre card_sous-titre">
+                    <a href="#2">
+                        1 100 km en Antarctique pour mieux comprendre l’évolution de la calotte glaciaire
+                    </a>
+                </h3>
+                <p class="focuscard__resume card_resume">De début décembre 2024 à mi-janvier 2025 seront déployés l’ensemble des systèmes d’observation du projet AWACA en Antarctique.</p>
+        </div>
+    </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__gridSlot layout__slot--columnspan4  layout__slot--6x0 js-layout__slot">
+    
+
+
+
+
+
+
+<div class="card portraitsCard">
+    <div class="portraitsCard-items">
+        <div class="portrait">
+                <a href="https://www.uvsq.fr/decouvrir-luvsq" class="portrait__image" style="background-image: url('/medias/photo/gif-v2_1721641514670-gif');">
+                    <img src="/medias/photo/gif-v2_1721641514670-gif" alt="" class="portrait__image__img">
+                </a>
+                <div class="portrait__titre">
+                    L'UVSQ, l'université des Yvelines
+                </div>
+                <div class="portrait__lien">
+                    <div class="card_lien">
+                        <a href="https://www.uvsq.fr/decouvrir-luvsq">
+                            Découvrir l'UVSQ
+                        </a>
+                    </div>
+                </div>
+        </div>
+        <div class="portrait">
+                <a href="#2" class="portrait__image" style="background-image: url('/medias/photo/chiffres-cles-carteportrait-homeuvsq_1731669101853-png');">
+                    <img src="/medias/photo/chiffres-cles-carteportrait-homeuvsq_1731669101853-png" alt="" class="portrait__image__img">
+                </a>
+                <div class="portrait__titre">
+                    Chiffres clés
+                </div>
+        </div>
+    </div>
+    <div class="portraitsCard-lien card_lien">
+    </div>
+</div>
+</div><div class="layout__slot layout__slot--filled layout__gridSlot layout__slot--columnspan2  layout__slot--8x0 js-layout__slot">
+    
+
+
+
+
+
+
+
+<div class="card toolboxCard">
+		
+
+	    <div class="toolboxCard__contenu2"><h2>L'importance du sport dans la santé mentale et physique</h2>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EWyx5QiK34I?si=AkTbrCad4daJeoI7" title="Comprendre l'importance du sport dans la santé mentale et physique" width="560"></iframe>
+
+<div style="text-align: center;"><a class="lien_interne" href="https://www.uvsq.fr/au-coeur-de-lactu">&gt; Voir tous les épisodes de la série Au coeur de l'actu</a></div>
+
+<h2><br>
+L'UVSQ recrute</h2>
+<table class="liste-fiche style0004"><tbody><tr>				<td>	            	<b><a class="liste-fiche--titre lien_interne" href="https://www.uvsq.fr/cheffe-de-cabinet-f-h-services-centraux">Chef(fe) de Cabinet F/H – Services Centraux</a></b><!-- .liste-fiche--titre -->										<p class="liste-fiche--date">						20 décembre 2024													&nbsp;-&nbsp;20 janvier 2025											</p>						            </td>			</tr><tr>				<td>	            	<b><a class="liste-fiche--titre lien_interne" href="https://www.uvsq.fr/gestionnaire-ressources-humaines-f-h-services-centraux">Gestionnaire ressources humaines F/H – Services Centraux</a></b><!-- .liste-fiche--titre -->										<p class="liste-fiche--date">						19 décembre 2024													&nbsp;-&nbsp;20 janvier 2025											</p>						            </td>			</tr><tr>				<td>	            	<b><a class="liste-fiche--titre lien_interne" href="https://www.uvsq.fr/responsable-infrastructures-systemes-et-reseaux-de-communication-f-h-dsin-service-centraux-versailles">Responsable Infrastructures, Systèmes et Réseaux de Communication F/H – DSIN Service Centraux Versailles</a></b><!-- .liste-fiche--titre -->										<p class="liste-fiche--date">						18 décembre 2024													&nbsp;-&nbsp;17 janvier 2025											</p>						            </td>			</tr><tr>				<td>	            	<b><a class="liste-fiche--titre lien_interne" href="https://www.uvsq.fr/responsable-administrateur-de-bases-de-donnees-f-h-dsin-service-centraux-versailles">Administrateur de Bases de Données F/H – DSIN Service Centraux Versailles</a></b><!-- .liste-fiche--titre -->										<p class="liste-fiche--date">						18 décembre 2024													&nbsp;-&nbsp;17 janvier 2025											</p>						            </td>			</tr><tr>				<td>	            	<b><a class="liste-fiche--titre lien_interne" href="https://www.uvsq.fr/ecoutante-de-la-cellule-vss-f-h-services-centraux">Écoutant(e) de la cellule VSS F/H – Services Centraux</a></b><!-- .liste-fiche--titre -->										<p class="liste-fiche--date">						18 décembre 2024													&nbsp;-&nbsp;17 janvier 2025											</p>						            </td>			</tr><tr>				<td>	            	<b><a class="liste-fiche--titre lien_interne" href="https://www.uvsq.fr/chargee-des-instances-f-h-services-centraux">Chargé(e) des instances F/H – Services Centraux</a></b><!-- .liste-fiche--titre -->										<p class="liste-fiche--date">						12 décembre 2024													&nbsp;-&nbsp;13 janvier 2025											</p>						            </td>			</tr><tr>				<td>	            	<b><a class="liste-fiche--titre lien_interne" href="https://www.uvsq.fr/responsable-de-la-cellule-conventions-de-formations-f-h-services-centraux">Responsable de la cellule conventions de formations F/H – Services Centraux</a></b><!-- .liste-fiche--titre -->										<p class="liste-fiche--date">						11 décembre 2024													&nbsp;-&nbsp;10 janvier 2025											</p>						            </td>			</tr></tbody></table><!-- .liste-fiche -->
+
+<div style="text-align: center;"><br>
+<a class="lien_externe" href="https://www.uvsq.fr/recrutement">&gt; Voir toutes les offres d'emploi</a><br>
+&nbsp;</div>
+
+<div style="text-align: center;">                <img src="https://www.uvsq.fr/medias/photo/rs-gardonslelien_1710858306968-png?ID_FICHE=5939" alt="gardons le lien sur les réseaux sociaux" style="width: 300px; height: 130px; margin: 4px 5px; float: none;">    </div>
+<a class="lien_externe" href="https://alumni.uvsq.fr/">                <img src="https://www.uvsq.fr/medias/photo/icone-alumni3_1710855038540-png?ID_FICHE=5939" alt="réseau Alumni de l'UVSQ" style="width: 121px; height: 43px; margin: 4px 5px; float: left;">    </a><a class="lien_externe" href="https://www.instagram.com/uvsq_universite/">                <img src="https://www.uvsq.fr/medias/photo/icone-instagram3_1710855069597-png?ID_FICHE=5939" alt="instagram de l'UVSQ" style="width: 121px; height: 43px; margin: 4px 5px; float: left;">    </a>
+
+<div style="text-align: center;"><a class="lien_externe" href="https://www.uvsq.fr/tiktok-de-luvsq">                <img src="https://www.uvsq.fr/medias/photo/icone-tiktok_1710856307353-png?ID_FICHE=5939" alt="tiktok de l'UVSQ" style="width: 121px; height: 43px; margin: 4px 5px; float: none;">    </a><a class="lien_externe" href="https://www.youtube.com/user/UVSQcommunication">                <img src="https://www.uvsq.fr/medias/photo/icone-youtube2_1710855143778-png?ID_FICHE=5939" alt="youtube de l'UVSQ" style="width: 121px; height: 43px; margin: 4px 5px; float: left;">    </a><br>
+<a class="lien_externe" href="https://www.linkedin.com/school/472434">                <img src="https://www.uvsq.fr/medias/photo/icone-linkedin2_1658240909028-png?ID_FICHE=5939" alt="linkedin UVSQ" style="width: 121px; height: 43px; margin: 4px 5px; float: left;">    </a><a class="lien_externe" href="https://www.uvsq.fr/facebook">                <img src="https://www.uvsq.fr/medias/photo/icone-facebook2_1710856354673-png?ID_FICHE=5939" alt="facebook de l'UVSQ" style="width: 121px; height: 43px; margin: 4px 5px; float: left;">    </a><a class="lien_externe" href="https://twitter.com/uvsq">                <img src="https://www.uvsq.fr/medias/photo/icone-twitter3_1710856651639-png?ID_FICHE=5939" alt="Twitter de l'UVSQ" style="width: 121px; height: 43px; margin: 4px 5px; float: left;">    </a> <a class="lien_externe" href="https://www.flickr.com/people/uvsq/">                <img src="https://www.uvsq.fr/medias/photo/icone-flickr_1710856674213-png?ID_FICHE=5939" alt="flickr de l'uvsq" style="width: 121px; height: 43px; margin: 4px 5px; float: none;">    </a><br>
+<a class="lien_interne" href="https://www.uvsq.fr/uvsqnews-la-newsletter">                <img src="https://www.uvsq.fr/medias/photo/rs-uvsqnews_1710854982079-png?ID_FICHE=5939" alt="UVSQnews, la newsletter de l'UVSQ" style="width: 300px; height: 110px; margin: 4px 5px; float: none;">    </a></div>
+</div>
+
+    
+
+</div>
+</div><div class="layout__slot layout__slot--filled layout__gridSlot layout__slot--columnspan2  layout__slot--8x2 js-layout__slot">
+    
+
+
+
+
+
+
+
+<div class="card toolboxCard">
+		
+
+	    <div class="toolboxCard__contenu2"><h2>Questions pour un chercheur : Mustapha Lebbah sur l'intelligence artificielle</h2>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/QjSwUAn0qhg?si=JJUfwXccV16by3Zv" title="YouTube video player" width="560"></iframe>
+
+<p style="text-align: center;"><a class="lien_interne" href="https://www.uvsq.fr/questions-pour-un-chercheur">&gt; Voir tous les épisodes de la série Questions pour un chercheur</a></p>
+
+<h2>UVSQ - La revue</h2>
+
+<div style="text-align:center;">
+<div style="margin:8px 0px 4px;"><a class="lien_externe" href="https://www.calameo.com/read/0057073203fad5c437050" target="_blank">UVSQ - La Revue n°12 - Automne/Hiver 2023</a><br>
+&nbsp;</div>
+<iframe allowfullscreen allowtransparency="" frameborder="0" height="495" scrolling="no" src="//v.calameo.com/?bkcode=0057073203fad5c437050&amp;mode=mini&amp;clickto=view&amp;clicktarget=_blank" style="margin:0 auto;" width="100%">&amp;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;#38;amp;#38;#38;#38;amp;#38;amp;#38;#38;#160;</iframe></div>
+
+<div style="text-align: center;"><br>
+<a href="https://www.uvsq.fr/uvsq-la-revue" class="lien_interne">&gt; Tous les numéros de la Revue</a></div>
+
+<div style="text-align: center;"></div>
+
+<h3 style="color: rgb(105, 4, 60); text-align: center;"><br>
+<br>
+<br>
+&nbsp;</h3>
+
+<h3 center="" style="text-align: center;" text-align:=""><a class="lien_externe" href="https://www.uvsq.fr/luvsq-classee-1ere-par-le-magazine-letudiant-pour-la-reussite-en-master" style="color:#69043c;"><strong>L'UVSQ classée 1ere université française<br>
+pour la réussite en Master</strong></a></h3>
+
+<div style="text-align: center;"><em>Magazine L'Etudiant, classement 2023</em></div>
+
+<div style="text-align: center;"></div>
+
+<div style="text-align: center;">                <img src="https://www.uvsq.fr/medias/photo/ensemble-pour-reussir_1710858487095-png?ID_FICHE=5939" alt="slogan de l'uvsq : ensemble pour réussir" style="width: 400px; height: 117px; margin: 4px 5px; float: none;">    <br>
+<a class="lien_interne" href="https://www.uvsq.fr/les-investissement-france-2030-moteurs-de-linnovation-a-luvsq">                <img src="https://www.uvsq.fr/medias/photo/france-2030-large_1710854668321-png?ID_FICHE=5939" alt="L'UVSQ dans France 2030" style="margin: 4px 5px; float: none;">    </a></div>
+</div>
+
+    
+
+</div>
+</div></div>
+
+</div>
+
+
+
+
+
+
+
+
+</div> <!-- .contenu -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="redacteur-date-impression">
+</div>
+<!-- #contenu-encadres -->
+</div><!-- #redacteur-date-impression -->
+
+</div><!-- #page_deco -->
+<div class="separateur"></div>
+</main> <!-- #page -->
+<div id="pied_outils">
+    <div class="acces-rapide">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		<div id="acces-directs">
+			
+					<div class="plier-deplier">
+						<button class="plier-deplier__bouton " aria-expanded="false"><span class="icon-libelle">UFR  | Instituts</span></button>
+						<div class="plier-deplier__contenu plier-deplier__contenu--clos clearfix">						
+						
+							<div class="colonne">
+								<ul>
+									
+										<li class=" type_rubrique_n2">
+											<span>10 composantes</span>
+											
+												<ul>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/faculte-de-droit-et-de-science-politique"  title="Faculté de droit et de science politique (nouvelle fenêtre)"  > Faculté de droit et de science politique</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/ieci"  title="IECI (nouvelle fenêtre)"  > IECI</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/ism-iae"  title="ISM-IAE (nouvelle fenêtre)"  > ISM-IAE</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/isty-ecole-dingenieurs"  title="ISTY École d'Ingénieurs (nouvelle fenêtre)"  > ISTY École d'Ingénieurs</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/iut-de-mantes"  title="IUT de Mantes (nouvelle fenêtre)"  > IUT de Mantes</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/iut-de-velizy-rambouillet"  title="IUT de Vélizy - Rambouillet (nouvelle fenêtre)"  > IUT de Vélizy - Rambouillet</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/ovsq"  title="OVSQ (nouvelle fenêtre)"  > OVSQ</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/ufr-des-sciences"  title="UFR des sciences (nouvelle fenêtre)"  > UFR des sciences</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/ufr-des-sciences-sociales"  title="UFR des sciences sociales (nouvelle fenêtre)"  > UFR des sciences sociales</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/ufr-simone-veil-sante"  title="UFR Simone Veil - santé (nouvelle fenêtre)"  > UFR Simone Veil - santé</a>
+													</li>
+												
+												</ul>
+											
+										</li>
+										
+								</ul>
+							</div>
+						
+						</div><!-- .plier-deplier__contenu -->
+					</div><!-- .plier-deplier -->
+				
+					<div class="plier-deplier">
+						<button class="plier-deplier__bouton " aria-expanded="false"><span class="icon-libelle">Bibliothèques</span></button>
+						<div class="plier-deplier__contenu plier-deplier__contenu--clos clearfix">						
+						
+							<div class="colonne">
+								<ul>
+									
+										<li class=" type_rubrique_n2">
+											<span>Un campus, une BU</span>
+											
+												<ul>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/le-portail-des-bibliotheques"  title="Le portail des bibliothèques (nouvelle fenêtre)"  > Le portail des bibliothèques</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/bu-de-saint-quentin-yvelines"  title="BU de Saint-Quentin-Yvelines (nouvelle fenêtre)"  > BU de Saint-Quentin-Yvelines</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/bu-de-versailles"  title="BU de Versailles (nouvelle fenêtre)"  > BU de Versailles</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/bu-de-boulogne"  title="BU de Boulogne (nouvelle fenêtre)"  > BU de Boulogne</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/bu-de-mantes"  title="BU de Mantes (nouvelle fenêtre)"  > BU de Mantes</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/bu-de-rambouillet"  title="BU de Rambouillet (nouvelle fenêtre)"  > BU de Rambouillet</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/bu-de-velizy"  title="BU de Vélizy (nouvelle fenêtre)"  > BU de Vélizy</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/bibliotheques-associees"  title="Bibliothèques associées (nouvelle fenêtre)"  > Bibliothèques associées</a>
+													</li>
+												
+													<li class=" type_rubrique_n3">
+														<a target="_blank" href="https://www.uvsq.fr/bibliotheques-paris-saclay"  title="Bibliothèques Paris-Saclay (nouvelle fenêtre)"  > Bibliothèques Paris-Saclay</a>
+													</li>
+												
+												</ul>
+											
+										</li>
+										
+								</ul>
+							</div>
+						
+						</div><!-- .plier-deplier__contenu -->
+					</div><!-- .plier-deplier -->
+				
+		</div><!-- #acces-directs -->
+	
+        
+
+
+
+
+<div class="acces-direct__intranet">
+    
+        <a href="https://www.uvsq.fr/etudiants" class="acces-direct__intranet_link">
+            <img src="/jsp/styles/img/picto-acces-direct.png" alt="Accès direct" title="Accès direct" width="11px" />Etudiants
+        </a>
+    
+        <a href="https://www.uvsq.fr/personnels-2" class="acces-direct__intranet_link">
+            <img src="/jsp/styles/img/picto-acces-direct.png" alt="Accès direct" title="Accès direct" width="11px" />Personnels
+        </a>
+    
+</div>
+    </div><!-- / -->
+
+</div>
+<!-- #pied_outils -->
+
+<footer id="pied_page" class="pied-page__site-principal" role="contentinfo">
+    
+
+
+
+
+
+
+
+
+
+
+
+		<ul id="pied_geant" class="clearfix">
+			
+				
+					<li>
+						<span>Accès directs</span>
+						<ul>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/annuaire-uvsq">Assistance informatique</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/contacts-2">Contacts</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/plan-des-campus">Plans des campus</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/espace-presse">Espace presse</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/recrutement-1">Recrutement</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/fiche-didentite">Fiche d'identité</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/les-logos-de-luvsq">Les logos de l'UVSQ</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/connexion-invite-ou-contributeur">Connexion invité ou contributeur</a>
+								</li>
+							
+						</ul>
+					</li>
+				
+				
+					<li>
+						<span>Paris-Saclay</span>
+						<ul>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/universite-paris-saclay-1">Université Paris-Saclay</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/ecole-universitaire-de-1er-cycle-paris-saclay-1">École universitaire Paris-Saclay</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/satt-paris-saclay">SATT Paris-Saclay</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/msh-paris-saclay">MSH Paris-Saclay</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/plug-in-labs">Plug in labs</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/incuballiance">IncubAlliance</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/institut-dataia">Institut DATAIA</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/la-diagonale-paris-saclay">La Diagonale Paris-Saclay</a>
+								</li>
+							
+						</ul>
+					</li>
+				
+				
+					<li>
+						<span>Réseaux</span>
+						<ul>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/fondation-uvsq-3">Fondation UVSQ</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/iep-sciences-po-saint-germain-en-laye">IEP Sciences Po Saint-Germain-en-Laye</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/espe">INSPÉ de l'académie de Versailles</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/ceremh">CEREMH</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/fondation-des-sciences-du-patrimoine">Fondation des Sciences du Patrimoine</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/maison-de-la-simulation">Maison de la Simulation</a>
+								</li>
+							
+								<li class=" type_rubrique_n2">
+									<a href="https://www.uvsq.fr/versailles-sciences-lab">Versailles Sciences Lab</a>
+								</li>
+							
+						</ul>
+					</li>
+				
+			
+			
+				<li class="logo-footer">
+					<img src="https://www.uvsq.fr/jsp/images/logo-footer.png" alt="Université Paris Saclay" title="Université Paris Saclay"/>
+				</li>
+			
+		</ul><!-- #pied_geant -->
+	
+
+    <div id="pied_page_complement">
+        
+
+
+
+<div class="pied_page_complement__contenu clearifx">
+	<ul>
+		
+				<li><a href="https://www.uvsq.fr/accessibilite-1">Accessibilité</a></li>
+			
+				<li><a href="https://www.uvsq.fr/contacts-6">Contacts</a></li>
+			
+				<li><a href="https://www.uvsq.fr/donnees-personnelles">Données personnelles</a></li>
+			
+				<li><a href="https://www.uvsq.fr/mentions-legales">Mentions légales</a></li>
+			
+				<li><a href="https://www.uvsq.fr/plan-du-site">Plan du site</a></li>
+			
+		
+			<li class="adresse">Université de Versailles Saint-Quentin-en-Yvelines<br>
+55 avenue de Paris<br>
+78035 Versailles cedex</li>
+		
+	</ul>
+</div>
+    </div>
+    <span id="haut_page"><span aria-hidden="true" class="icon icon-arrow-up"></span><a href="#body"><span class="icon-libelle"></span></a></span>
+</footer>
+<!-- #pied_page -->
+<div class="check-media"></div>
+
+<script type="text/javascript" src="https://www.uvsq.fr/wro/scriptsFo_fr_FR/f6a34080b61445a775fab870679734be2190be2e.js"></script>
+
+
+
+
+
+
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0BMQ6YH4N8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('consent', 'default', {
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+            'wait_for_update': 500,
+        });
+        gtag('js', new Date());
+        gtag('config', 'G-0BMQ6YH4N8');
+    </script>
+
 </body>
 </html>
+
