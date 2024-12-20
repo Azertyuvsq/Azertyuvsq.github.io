@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copie et Modification</title>
-    <script>
-        // Fonction pour charger le contenu d'une autre page et le modifier
-        function chargerEtModifierContenu() {
-            // On simule la récupération du contenu d'une autre page HTML (en local ou en ligne)
-            fetch('https://www.uvsq.fr/')
-                .then(response => response.text())  // Récupérer le contenu de la page source
-                .then(data => {
-                    // Insérer le contenu de la page source dans un élément de la page
-                    document.getElementById('contenu').innerHTML = data;
-                    
-                    // Modifier certaines parties du contenu avec JavaScript
-                    document.querySelectorAll('.modification').forEach(element => {
-                        element.textContent = 'Contenu modifié avec JavaScript!';
-                    });
-                })
-                .catch(error => {
-                    console.error("Erreur lors du chargement de la page source:", error);
-                });
-        }
-
-        // Appeler la fonction au chargement de la page
-        window.onload = chargerEtModifierContenu;
-    </script>
+    <title>Replace Content</title>
 </head>
 <body>
-    <h1>Page principale (index.html)</h1>
-    <div id="contenu">
-        <!-- Le contenu de source.html sera inséré ici et modifié par JS -->
+    <div id="content">
+        <h1>This will be replaced by external content</h1>
     </div>
+    <button id="replaceButton">Replace with External Content</button>
+
+    <script>
+        document.getElementById('replaceButton').addEventListener('click', () => {
+            // URL of the external page
+            const externalURL = 'https://www.uvsq.fr/';
+
+            // Fetch the external content
+            fetch(externalURL)
+                .then(response => {
+                    // Ensure successful response
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch external content');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // Replace content of #content with external content
+                    document.getElementById('content').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
 </body>
 </html>
