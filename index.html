@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Replace Content</title>
+    <title>Embed External Page</title>
 </head>
 <body>
     <div id="content">
@@ -13,25 +13,12 @@
 
     <script>
         document.getElementById('replaceButton').addEventListener('click', () => {
-            // URL of the external page
-            const externalURL = 'https://www.uvsq.fr/';
-
-            // Fetch the external content
-            fetch(externalURL)
-                .then(response => {
-                    // Ensure successful response
-                    if (!response.ok) {
-                        throw new Error('Failed to fetch external content');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    // Replace content of #content with external content
-                    document.getElementById('content').innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.uvsq.fr'; // Replace with the external page URL
+            iframe.style.width = '100%';
+            iframe.style.height = '500px'; // Set desired height
+            document.getElementById('content').innerHTML = ''; // Clear the current content
+            document.getElementById('content').appendChild(iframe); // Embed the iframe
         });
     </script>
 </body>
