@@ -3,44 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remplacer le contenu</title>
-    <script>
-        // Remplacez l'URL ci-dessous par l'URL de la page que vous souhaitez charger
-        var url = "https://www.uvsq.fr/"; // URL à charger automatiquement
-
-        // Fonction pour charger le contenu de l'URL spécifiée
-        function chargerContenu() {
-            var xhr = new XMLHttpRequest(); // Crée une nouvelle requête AJAX
-            xhr.open("GET", url, true); // Configuration de la requête (méthode GET)
-            
-            // Lorsqu'on reçoit une réponse, on met à jour le contenu de la page
-            xhr.onload = function() {
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    document.getElementById("contenuPage").innerHTML = xhr.responseText; // Remplace le contenu
-                } else {
-                    alert("Erreur de chargement de la page.");
-                }
-            };
-
-            xhr.onerror = function() {
-                alert("Une erreur s'est produite lors de la requête.");
-            };
-
-            xhr.send(); // Envoie la requête
-        }
-
-        // Appel de la fonction au chargement de la page
-        window.onload = chargerContenu;
-    </script>
+    <title>Remplacer le contenu par un iframe</title>
 </head>
 <body>
 
     <h1>Page principale</h1>
     
-    <div id="contenuPage" style="margin-top: 20px;">
-        <!-- Le contenu de la page sera remplacé ici -->
-        <p>Le contenu sera remplacé par celui de la page URL que vous fournissez.</p>
-    </div>
+    <!-- Remplacez l'URL ci-dessous par l'URL que vous souhaitez afficher -->
+    <iframe id="contenuIframe" src="https://www.uvsq.fr" width="100%" height="600px">
+        Votre navigateur ne prend pas en charge les iframes.
+    </iframe>
 
 </body>
 </html>
