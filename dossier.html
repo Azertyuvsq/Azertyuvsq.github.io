@@ -1,5 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page avec div gris et widgets</title>
+    <style>
+        /* Style général de la page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Div gris à gauche */
+        .sidebar {
+            width: 233px;
+            background-color: #808080;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Conteneur pour les widgets */
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Style des widgets rectangulaires */
+        .widget {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
 <body>
- <div style="width: 233px;">
-  
- </div>
+
+    <!-- Sidebar gris -->
+    <div class="sidebar">
+        <h3>Menu</h3>
+        <ul>
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+        </ul>
+    </div>
+
+    <!-- Contenu principal avec des widgets -->
+    <div class="content">
+        <div class="widget">
+            <h4>Widget 1</h4>
+            <p>Ceci est le contenu du premier widget. Il peut contenir du texte, des images ou d'autres éléments.</p>
+        </div>
+        <div class="widget">
+            <h4>Widget 2</h4>
+            <p>Ce widget a également du texte. Vous pouvez l'utiliser pour afficher différents types de contenu.</p>
+        </div>
+        <div class="widget">
+            <h4>Widget 3</h4>
+            <p>Voici un autre widget, avec encore plus de texte pour illustrer la pile de widgets.</p>
+        </div>
+    </div>
+
 </body>
+</html>
