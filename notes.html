@@ -1,550 +1,107 @@
-
 <!DOCTYPE html>
-
-<html  dir="ltr" lang="fr" xml:lang="fr">
+<html lang="fr">
 <head>
-    <title>Se connecter sur le site | eCampus</title>
-    <link rel="shortcut icon" href="https://ecampus.paris-saclay.fr/pluginfile.php/1/theme_boost_union/favicon/64x64/1736426634/favicon%281%29.png" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="moodle, Se connecter sur le site | eCampus" />
-<link rel="stylesheet" type="text/css" href="https://ecampus.paris-saclay.fr/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://ecampus.paris-saclay.fr/theme/styles.php/boost_union/1736426634_1735892119/all" />
-<link rel="stylesheet" type="text/css" href="https://ecampus.paris-saclay.fr/course/format/onetopic/styles.php" />
-<script>
-//<![CDATA[
-var M = {}; M.yui = {};
-M.pageloadstarttime = new Date();
-M.cfg = {"wwwroot":"https:\/\/ecampus.paris-saclay.fr","apibase":"https:\/\/ecampus.paris-saclay.fr\/r.php\/api","homeurl":{},"sesskey":"3rAuQyxOyH","sessiontimeout":"14400","sessiontimeoutwarning":1200,"themerev":"1736426634","slasharguments":1,"theme":"boost_union","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1736426635","admin":"admin","svgicons":true,"usertimezone":"Europe\/Paris","language":"fr","courseId":1,"courseContextId":2,"contextid":1,"contextInstanceId":0,"langrev":-1,"templaterev":"1736426635","siteId":1,"userId":0};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
-var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
-if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
-YUI_config = {"debug":false,"base":"https:\/\/ecampus.paris-saclay.fr\/lib\/yuilib\/3.18.1\/","comboBase":"https:\/\/ecampus.paris-saclay.fr\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/ecampus.paris-saclay.fr\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/ecampus.paris-saclay.fr\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/ecampus.paris-saclay.fr\/theme\/yui_combo.php?m\/1736426635\/","combine":true,"comboBase":"https:\/\/ecampus.paris-saclay.fr\/theme\/yui_combo.php?","ext":false,"root":"m\/1736426635\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_releasecode-form":{"requires":["base","node","event","event-valuechange","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_hsuforum-article":{"requires":["base","node","event","router","core_rating","querystring","moodle-mod_hsuforum-io","moodle-mod_hsuforum-livelog"]},"moodle-mod_hsuforum-livelog":{"requires":["widget"]},"moodle-mod_hsuforum-io":{"requires":["base","io-base","io-form","io-upload-iframe","json-parse"]},"moodle-mod_offlinequiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_offlinequiz-offlinequizbase":{"requires":["base","node"]},"moodle-mod_offlinequiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_offlinequiz-offlinequizbase","moodle-mod_offlinequiz-util-base","moodle-mod_offlinequiz-util-page","moodle-mod_offlinequiz-util-slot","moodle-course-util"]},"moodle-mod_offlinequiz-modform":{"requires":["base","node","event"]},"moodle-mod_offlinequiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_offlinequiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_offlinequiz-offlinequizbase","moodle-mod_offlinequiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_offlinequiz-randomquestion":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_offlinequiz-util":{"requires":["node"],"use":["moodle-mod_offlinequiz-util-base"],"submodules":{"moodle-mod_offlinequiz-util-base":{},"moodle-mod_offlinequiz-util-slot":{"requires":["node","moodle-mod_offlinequiz-util-base"]},"moodle-mod_offlinequiz-util-page":{"requires":["node","moodle-mod_offlinequiz-util-base"]}}},"moodle-mod_offlinequiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_offlinequiz-util","querystring-parse"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form","datatype-date-format"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-local_kaltura-ltiservice":{"requires":["base","node","node-event-simulate"]},"moodle-local_kaltura-ltipanel":{"requires":["base","node","panel","node-event-simulate"]},"moodle-local_kaltura-lticontainer":{"requires":["base","node"]},"moodle-local_kaltura-ltitinymcepanel":{"requires":["base","node","panel","node-event-simulate"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-quizaccess_offlinemode-sjcl":{"requires":[]},"moodle-quizaccess_offlinemode-jsencrypt":{"requires":[]},"moodle-quizaccess_offlinemode-download":{"requires":["base","node","event","node-event-delegate","json","io-form","moodle-quizaccess_offlinemode-jsencrypt","moodle-quizaccess_offlinemode-sjcl"]},"moodle-quizaccess_offlinemode-navigation":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form","moodle-core-notification-confirm"]},"moodle-quizaccess_offlinemode-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form","core_question_engine","mod_quiz"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bsgrid-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_chemistry-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_count-button":{"requires":["io","json-parse","moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_filedragdrop-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_hr-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_htmlplus-beautify":{},"moodle-atto_htmlplus-codemirror":{"requires":["moodle-atto_htmlplus-codemirror-skin"]},"moodle-atto_htmlplus-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_htmlplus-beautify","moodle-atto_htmlplus-codemirror","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_imagedragdrop-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_kalturamedia-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_teamsmeeting-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_ubicast-button":{"requires":["promise","moodle-editor_atto-plugin","event-valuechange"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/ecampus.paris-saclay.fr\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/ecampus.paris-saclay.fr\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1736426635\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/ecampus.paris-saclay.fr\/lib\/javascript.php\/1736426635\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/ecampus.paris-saclay.fr\/lib\/javascript.php\/1736426635\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]}},"logInclude":[],"logExclude":[],"logLevel":null};
-M.yui.loader = {modules: {}};
-
-//]]>
-</script>
-
-<meta name="robots" content="noindex" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau des Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #4B0082; /* Violet */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4B0082;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .options {
+            margin: 20px;
+            text-align: center;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #4B0082;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        .options button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #4B0082;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+        .options button:hover {
+            background-color: #6a0dad;
+        }
+    </style>
 </head>
-<body  id="page-login-index" class="format-site  path-login chrome dir-ltr lang-fr yui-skin-sam yui3-skin-sam ecampus-paris-saclay-fr pagelayout-login course-1 context-1 notloggedin theme theme_boost-union-footerbuttondesktop">
-<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+<body>
 
-<div id="page-wrapper">
+<header>
+    <h1>Compte Étudiant: Jean Dupont</h1>
+</header>
 
-    <div>
-    <a class="sr-only sr-only-focusable" href="#maincontent">Passer au contenu principal</a>
-</div><script src="https://ecampus.paris-saclay.fr/lib/javascript.php/1736426635/lib/polyfills/polyfill.js"></script>
-<script src="https://ecampus.paris-saclay.fr/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.js"></script><script src="https://ecampus.paris-saclay.fr/lib/javascript.php/1736426635/lib/javascript-static.js"></script>
-<script>
-//<![CDATA[
-document.body.className += ' jsenabled';
-//]]>
-</script>
-
-<div class="eupopup eupopup-container eupopup-container-block eupopup-container-bottom eupopup-block eupopup-style-compact" role="dialog" aria-label="Politiques">
-    </div>
-    <div class="eupopup-markup d-none">
-        <div class="eupopup-head"></div>
-        <div class="eupopup-body">
-            Si vous continuez à consulter ce site web, vous acceptez nos politiques :
-            <ul>
-                    <li>
-                        <a href="https://ecampus.paris-saclay.fr/admin/tool/policy/view.php?versionid=1&amp;returnurl=https%3A%2F%2Fecampus.paris-saclay.fr%2Flogin%2Findex.php" data-action="view-guest" data-versionid="1" data-behalfid="1">
-                            Politique de confidentialité
-                        </a>
-                    </li>
-            </ul>
-        </div>
-        <div class="eupopup-buttons">
-            <a href="#" class="eupopup-button eupopup-button_1">Continuer</a>
-        </div>
-        <div class="clearfix"></div>
-        <a href="#" class="eupopup-closebutton">x</a>
-    </div>
-
-    <div id="page" class="container-fluid pt-5 mt-0">
-        
-        <div id="page-content" class="row">
-            <div id="region-main-box" class="col-12">
-                <section id="region-main" class="col-12 h-100" aria-label="Contenu">
-                <div class="login-wrapper login-wrapper-center">
-                    <div class="login-container ">
-                    <div role="main"><span id="maincontent"></span><div class="loginform">
-        <div id="loginlogo" class="login-logo">
-            <img id="logoimage" src="https://ecampus.paris-saclay.fr/pluginfile.php/1/theme_boost_union/logo/0x200/1736426634/eCampusnew2.png" class="img-fluid" alt="eCampus"/>
-            <h1 class="login-heading sr-only">Connexion à eCampus</h1>
-        </div>
-    <div id="theme_boost_union-loginorder">
-    <div id="theme_boost_union-loginorder-local" class="theme_boost_union-loginmethod">
-    <div class="login-divider"></div>
-    <h2 class="login-heading">Connexion avec un compte local</h2>
-    <form class="login-form" action="https://ecampus.paris-saclay.fr/login/index.php" method="post" id="login">
-        <input id="anchor" type="hidden" name="anchor" value="">
-        <script>document.getElementById('anchor').value = location.hash;</script>
-        <input type="hidden" name="logintoken" value="fCey7BwtSuPwRIklWQZD0Besf11cNg9P">
-        <div class="login-form-username mb-3">
-            <label for="username" class="sr-only">
-                    Nom d’utilisateur ou courriel
-            </label>
-            <input type="text" name="username" id="username" class="form-control form-control-lg" value="" placeholder="Nom d’utilisateur ou courriel" autocomplete="username">
-        </div>
-        <div class="login-form-password mb-3">
-            <label for="password" class="sr-only">Mot de passe</label>
-            <input type="password" name="password" id="password" value="" class="form-control form-control-lg" placeholder="Mot de passe" autocomplete="current-password">
-        </div>
-        <div class="login-form-submit mb-3">
-            <button class="btn btn-primary btn-lg" type="submit" id="loginbtn">Connexion</button>
-        </div>
-        <div class="login-form-forgotpassword mb-3">
-            <a href="https://ecampus.paris-saclay.fr/login/forgot_password.php">Mot de passe perdu ?</a>
-        </div>
-    </form>
-    </div>
-    <div id="theme_boost_union-loginorder-idp" class="theme_boost_union-loginmethod">
-        <div class="login-divider"></div>
-        <div class="login-identityproviders">
-            <h2 class="login-heading">Connexion avec un compte établissement</h2>
-                <a class="btn login-identityprovider-btn btn-block btn-secondary" href="https://ecampus.paris-saclay.fr/auth/saml2/login.php?wants=https%3A%2F%2Fecampus.paris-saclay.fr%2Fgrade%2Freport%2Foverview%2Findex.php%3Fid%3D1%26userid%3D0&amp;idp=0f5dc3e67942aebcb4fe827ac93ece07&amp;passive=off">
-                        <img src="data://image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABQklEQVR42s2SsUoDQRCGd/Zu7273kjv0LhqSoEUKsYpobeV72PgOdoKP4EP4ApYW2oiiIJhGtJCQwohRiMl5ueSy2VtHA1qIiEXAZWB3i2/+/x8GtNbkLwemD/SGqWdb+FKZMqjxO7B7fFEQPB7JRjdaKYbri6VEjvUPunmLwcFNY8HPx+koVWo+JwQzsXzbRrPfgXScwfbhKRAyy51OMhCM3XUjl7Gt1WXUVO8yXxj+fMeCk+ZDKBwC5L4XY+9UqkKOBy7v9JNq4BNNPxm80AXsndWbLxFQoFqvlYtXj0+U0IrnYqTN2lKmtcyySSBNNIrDfv3WtVmcyoA7tWJgM/O63cHRMYNGOEDHXgpmPIdNIKUJ7Bydh5yXPIFytbnQMo3LVrv1mpQ9MZTquT/YqFaw8Ucegp4hGUnOzH+1GlMH3gAuap4eYTb6mAAAAABJRU5ErkJggg==" alt="" width="24" height="24"/>
-                    Ecole Normale Supérieure Paris-Saclay
-                </a>
-                <a class="btn login-identityprovider-btn btn-block btn-secondary" href="https://ecampus.paris-saclay.fr/auth/saml2/login.php?wants=https%3A%2F%2Fecampus.paris-saclay.fr%2Fgrade%2Freport%2Foverview%2Findex.php%3Fid%3D1%26userid%3D0&amp;idp=f607987e0e3724673e8a34118d96dae5&amp;passive=off">
-                        <img src="data://image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAAClUlEQVQoz4XLXU9SYRwA8P/zclBAQJ04DUMXIlijCdnWXZlZF3Zh6ypqtfVyWZfd1mprq5u+Qptld7VydVWtGjNz6UxJRbQxjxxOAqLAgXM4z3mePoK/+x/aSG/M/ZyjlMJBmMVisRhNJpPxa3EXuA8MFShPvZqihFI7ODv9nQcG2AJKKAWAOmh6TQcEhBKEEMbY0A0qSZZlEYLNhkkpJYRUoAwAlFvW9as3PB63YRjFQlHTaoqiTFyeWF9L9fb1ybIcOR5Jp9ZzOTU6PMQ5pwDAOaeSNBAKffn0+cRwrPK1Eg6HmyTb6uqa3+9f+LVw687NYnHXbm9mjJH4lfiH6Y+GYXR3dwmAXr+/2d7c3t6eyymhcNg0zWgsmslkJl9M6oY+EBqgCOPEbMLn9RXyhUB///t30/md/PLv5UbD7PDKwWAw8T2hqurYhbFsNgsAFADs4JAkye1xb8tyoD/g6+kpl/cD/YG90h5GaGR0RKtWS6W90XOj3OJUCF4HjTG2mlw1TTO7nWWMMWYtLS5xi2OCKaWcc0mSqpXqs+dPaYvLNTZ+0elwCM65YSIbRRgD54hSbjJEMMLY0g3AuF6vu9takZFRtfkUooS0OFxno7WZFXO/InW1acm/rkiw8W+3Jitdl0YbalFwwQQjd8+My49f1lOKvpHTt1T54WtTqwlLrN9+YOv1F6a+7b6dzT56U1OU9L0nzacGsQCur+X2fyxVl9KkvaWxWSjP/3Ec7SPQ0uTroD1tredjtkiH8+QABiciBHOTNeoZs7RjKVXnsSOd98ebOrzaWgaBTXBh5PLCEp7TQ56RIQGGYAxpm/L+wgoimNod9t5DdVklmNoOe6vJTU90UMsqQmtgm+Qc7CvNLLoiwf/9YlMHLNeSiwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNS0wNy0yMFQxMDo0OTo0MiswMjowMMft3eUAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTUtMDctMjBUMTA6NDk6NDIrMDI6MDC2sGVZAAAAAElFTkSuQmCC" alt="" width="24" height="24"/>
-                    Télécom Paris
-                </a>
-                <a class="btn login-identityprovider-btn btn-block btn-secondary" href="https://ecampus.paris-saclay.fr/auth/saml2/login.php?wants=https%3A%2F%2Fecampus.paris-saclay.fr%2Fgrade%2Freport%2Foverview%2Findex.php%3Fid%3D1%26userid%3D0&amp;idp=a937ff1f50145fee098f32dc3907c247&amp;passive=off">
-                        <img src="data://image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAjVBMVEViADxiADxiADxiADxiADx1KVKvgpebZH9kAD7m2uD///+eaIJrE0a3jqGwhJns4+d7Mlh1J1FkAD9wHUtoBUKPU3G7laeISGj9+/xqDUR9NlvIqrjPtcGGRGX18POldIycZ4H38vSCP2HDorK4kaSyiJzIq7nq4OXOtMC0i5/Nsr/h0dm3kKOQVHGOUW8B/FGpAAAABHRSTlNJ50vlOs83MQAAAAFiS0dECmjQ9FYAAAAHdElNRQflAgEHDjoV4fYtAAAAe0lEQVQY013PyxaCMAwE0BYHhQgUVFTeKqBWxf//PMsRS2sWSeaebMIYh1Gc2XkUvbrLlaeGBs8nWpsQEFFoAiIS8QzJBtjuoCGl/e/wC4djZAMy/AFsyAu/rAyI6yY/nS8ztJ1q/XUC9dztLqV8iOk5h+P5GlS9x7xwPkAACI+hX0UdAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTAyLTAxVDA3OjE0OjU4KzAwOjAwD3GsswAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wMi0wMVQwNzoxNDo1OCswMDowMH4sFA8AAAAASUVORK5CYII=" alt="" width="24" height="24"/>
-                    Accès enseignant UPSaclay (en test)
-                </a>
-                <a class="btn login-identityprovider-btn btn-block btn-secondary" href="https://ecampus.paris-saclay.fr/auth/saml2/login.php?wants=https%3A%2F%2Fecampus.paris-saclay.fr%2Fgrade%2Freport%2Foverview%2Findex.php%3Fid%3D1%26userid%3D0&amp;idp=3df4dd6f9dab3e24b13e8f31ba9782e6&amp;passive=off">
-                        <img src="data://image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAAA5klEQVQoz4VSoRbCMAwMPERl5WTkZCVyEomcnOQTkMhJPgGJnEQikZWVk5WRJxEdZUvH40Rf37WXXK7dAKAlRpH62tMacOm3JcvWHuu65BOpBT5GIjrUrhQkUgva+y0Vs8b87zCEMIoMIVhjlKtcYiF4BJ/X1u1LPysd8tows7XKz0IwhCAAEQmQNJ2bqjbMeaSv4O5fylt2dZjNs8s7ARrmvE8P0jA/x/E4S/kreHSnMvvW7QWYDzMJbt5HifOrla0658on3wAQoOov6sAaE8+anIZOmSjkrFYEKZMSq/zPDvT5iApvmtxo9RyUVFQAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMDctMjBUMTA6NDg6MTUrMDI6MDClaIYxAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTA3LTIwVDEwOjQ4OjE1KzAyOjAw1DU+jQAAAABJRU5ErkJggg==" alt="" width="24" height="24"/>
-                    AgroParisTech Institut des sciences et des industries du vivant et de l&#039;environnement
-                </a>
-                <a class="btn login-identityprovider-btn btn-block btn-secondary" href="https://ecampus.paris-saclay.fr/auth/saml2/login.php?wants=https%3A%2F%2Fecampus.paris-saclay.fr%2Fgrade%2Freport%2Foverview%2Findex.php%3Fid%3D1%26userid%3D0&amp;idp=12c4bbe861accb8dc75230bceee08aa3&amp;passive=off">
-                        <img src="data://image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACylBMVEX2+vthwdYAsNIvuNUmttVjwttHudRevtZgvtRRt81uwNBKs8JVs8A6qbN6v8b3+/zV7e8AnMsAtewAtesAuukWu+gAtuUyuuI2ut4ctNc9ttE+s8surL82q7YAkZzZ7e/m8/QAq9IAueYAt+Ynv+cVveYwveU8vuJDvt5FvNxFutRXvNFAtMdNtL8ipq/o8/TU7O8As84As98Uv+QAvuI3weM+weI7v99GwN1Ywt1bwddUvdBhv89Bs79OsrrY7e/e7/MApcQAu9wAutsYwN4+w99IxN5Kw91YxN1ixdtkxdhgwtNWvcxlv8oTp7Hh8PLZ7vEAssYAtdMAvtgYwNk+w9tayN1gyd1syt1xy9xrx9hoxdRrxNFavchVtb/e7/He8PIArL4Auc8AvtQxxNZUydprzd190d6G0t+D0d2Aztt7y9hyx9NpxM5Js73k8fPa7/EAsL4AucoAwtFDyNZt0NuL1+Ch3eSm3uWf2uKV1d6J0Np9zdZvxtBYucPg8PHc7/IAsbwAu8gExc9cz9eR2+C+6Ova8PLe8vPL6u6w4OWa196J0Nh7y9NgvMbi8fLc8PEAr7kAvcY6y9F719vD6+z4/Pz////5/PzU7vCt3uOY1t2BztVhvcfi8fPe8PMAscAAvMtJzNmZ3+nx/P/4/f+75fCW1uJ5y9pbvMzj8vTn8uxqs4x0uY2EvpOYx5q306a91qi81ai306Wcx5qKv5N/u493t4/r8+7k7t9poiV8sxV7tBh3sxVysRBxsRBvsRB2sxR7tBZ9tRB1ribn7+Lm7+NTlyNdnxRsqyB0sSV6tSd8uCR9uSR/uiR/uiJ9uR14tgZurCbq8Ob8/fu30KqBrmRmoT9bnCJeoBNnqBVxsRx0sxtwsRBtrw9xrx58tD2UwGbD2bD9/fzy9vHX5c+30KWXvHt9r1V+sFKbwHi606PZ587y9vBPykJQAAAAAWJLR0SX5m4brwAAAAd0SU1FB+UCAQcOOhXh9i0AAAEbSURBVBjTARAB7/4AAAECAwQFBgcICQoLDA0ODwAQERITFBUWFxgZGhscHR4fACAhIiMkJSYnKCkqKywtLi8AMDEyMzQ1Njc4OTo7PD0+PwBAQUJDREVGR0hJSktMTU5PAFBRUlNUVVZXWFlaW1xdXl8AYGFiY2RlZmdoaWprbG1ubwBwcXJzdHV2d3h5ent8fX5/AICBgoOEhYaHiImKi4yNjo8AkJGSk5SVlpeXmJmam5ydngCfoKGio6SXl5eXpaanqKmqAKusra6vsLGysrGztLW2t7gAubq7vL2+v8DAv77BwsPExQDGx8jJysvMzc7Ozs/Q0dLTANTV1tfY2drb3N3e3+Dh4uMAl5eX5OXm5+jp6uvs7ZeXl2vXeeVHgkxCAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTAyLTAxVDA3OjE0OjU4KzAwOjAwD3GsswAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wMi0wMVQwNzoxNDo1OCswMDowMH4sFA8AAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC" alt="" width="24" height="24"/>
-                    Université de Versailles St. Quentin en Yvelines
-                </a>
-                <a class="btn login-identityprovider-btn btn-block btn-secondary" href="https://ecampus.paris-saclay.fr/auth/saml2/login.php?wants=https%3A%2F%2Fecampus.paris-saclay.fr%2Fgrade%2Freport%2Foverview%2Findex.php%3Fid%3D1%26userid%3D0&amp;idp=f96d8fe7d00a51089948bde71d6f9cc2&amp;passive=off">
-                        <img src="data://image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAC4jAAAuIwF4pT92AAACF0lEQVR42mN88eIFA9Hg379/jP///4dwzl683dCzGFk6I97n/7//PDwcKgpSMlKiDAwMf//+ZYFL7zp49tjpa8zMTPaWes52hi9//4svn/r/61eIrKGO8sLJpRJigkxwDUdOXgnxsT23e+rqOTW3xSRnv/vDEe7PLCsFkT1/5e61W48YGBigGr59/6kkLzWzJx9itYGEIOufP/8+fPr35SsDAwMvD1dHTbKrvREDAwPUSSfP3fjw6cuv33/YWFkYGBhCNaTL46o4OdjsDNU9HE2CvG34eLkgKlng7tm255SBU4adhZ68jJi6quy5vdPERQQZGdEDChpKN+8++fPnj6SYMCcn+9ev3wUFeO8/eiEqwv/p87cvX78ry0t++vJdRIgPGkqfPn/rn7E2JtTl0PHLf/7+Y2ZmEhXmf/vuk4yUqKgw/537z75+/TF94ZYZXXlMTIxMDAwMF67cNdRTERXm5+LksDLV+vrtBzcXp6gwPzMz07MXb23NdU6cu2FroXPx6j2Ek4gEUCd9//7z05fvBFXz8XKxsTKzMDAwMLMwf/7y7dK1ewY6Kopy4oyYQYNpQ3nzHBEh/hev3kcEONy8++T67UdGeiofPn69fe+ppLjQnz9/WVlZpCWEdTUVGP/////r958jJ69s23vK3EjDx9WcnY2NkZHh/38GCMnAwPD//39GRgYGRsb///4x/vv3jyRPAwDbw+WSId6PpwAAAABJRU5ErkJggg==" alt="" width="24" height="24"/>
-                    ENSTA Paris - Ecole Nationale Supérieure de Techniques Avancées
-                </a>
-                <a class="btn login-identityprovider-btn btn-block btn-secondary" href="https://ecampus.paris-saclay.fr/auth/saml2/login.php?wants=https%3A%2F%2Fecampus.paris-saclay.fr%2Fgrade%2Freport%2Foverview%2Findex.php%3Fid%3D1%26userid%3D0&amp;idp=990cff54e93927cf9af57b63c98cbdaa&amp;passive=off">
-                        <img src="data://image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEgUExURQBVlAJWlStwpQ5emhJhmwhal0uGsxBemnCfwrrQ4VuRuS1ypxNhnG+ewpC0z0qGsxpmn3Kfw5u71GKVvAFWlEOAr5a30idupCZto16SuzV3qkWCsGubwDN2qU2GszZ3qmOVvVaMt3ejxXulxmycwFOLtkeDsSRsoxtmn02HtDB0p1eOuDB0qBxnoEKArwZZl46yzjx8rLLL3qzG20+JtX2nyI6zz0aDsZa40hFgm5O20bXN34ivzX6oyCpxpZy81AdalwlbmJ++1qPA11KKtpCzz3ajxQtbmChvpANXlQRXlT9+rh9poavF20F+rh9ooD59rTt6rE6HtEJ/r0WBsFyRui90pwtcmUyHswpbmCVtowFWlTp6rAFVlA5dmRdjnVkqZ6oAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACtSURBVChTY4AARigNB0xQGgKYWVjZoEwQYGfg4ORihnJAgJuHl48fygYDAUEhYSiTgUEERIiKiUtISknLyMrJKyiCBJSUVVTV1DU0tbR1dPWAfH0DQyM+YxNTITNzCwYLoICllbm1ja2dvaqZg5CjE0iLs4urqZu7h6eml7eBPUjAx9fQzz8gMEgqOCQ0DCQQHiEZCaJhwDOKITpGHcoBgtg4EOkQ7wXmYQAGBgAyCxT7cokzJwAAAABJRU5ErkJggg==" alt="" width="24" height="24"/>
-                    Université d&#039;Evry
-                </a>
-                <a class="btn login-identityprovider-btn btn-block btn-secondary" href="https://ecampus.paris-saclay.fr/auth/saml2/login.php?wants=https%3A%2F%2Fecampus.paris-saclay.fr%2Fgrade%2Freport%2Foverview%2Findex.php%3Fid%3D1%26userid%3D0&amp;idp=2b202a033c772a7bd9094ab67e4e20df&amp;passive=off">
-                        <img src="data://image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABFFBMVEX6+vri4uTDwsjy8fL29vasqbJwan/r6+yvrbWXk6Dw8PHn5uhxa4DU09bFxMmloqz4+PirqbKAe4zV1Ne6ucC9u8K3tbz29fXUyMq9qq3CsLPf19j5+fnGxMqkoaz39/eopa+emqbu7e7o4+SSZWx7Lj6pjJD18/PT0dXq6euLcn+CQ06ulZilhop8MUGulJixr7eUkJ2fnKd0b4OOeobt6urb0tR9NEPk3t/29vetq7SQjJrq6uvr5ueWbHOfe4H29PXGtrjk4+XBwMbY19q5pKfo4+PDsrTc09WZcXe6paj5+Pmpi5DJurz6+fnRxMZ7Lz/p5OTy7++VanG4oqXv6+x7LT18Lz+3oKT39vbNwML///8giYlwAAAAAWJLR0RbdLyVNAAAAAd0SU1FB+UCAQcOO2LmxrsAAACnSURBVBjTTY5FEgJRDESDBRncB7cw+ODu7u73PwgfNvxepKpfujoBAFAoVcBJrUHU8kCHqDdwXkCjid+DGS1Wm93xB050CYhu8HhFnz/AQBBD4Ug0Fk8QU1L6daQA0hnK5vIFklmkiFgqV7BaA6g3qAnQaiNTp9vrD4Yyjb694+BkaoUZ0XxB4v/ccrXebGnHv7Q/0PHE+fOF6MoHbvfH88UD6R1n8wOx+BNNORQatAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wMi0wMVQwNzoxNDo1OSswMDowMKkGpwcAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDItMDFUMDc6MTQ6NTkrMDA6MDDYWx+7AAAAAElFTkSuQmCC" alt="" width="24" height="24"/>
-                    CentraleSupelec secours
-                </a>
-                <a class="btn login-identityprovider-btn btn-block btn-secondary" href="https://ecampus.paris-saclay.fr/auth/saml2/login.php?wants=https%3A%2F%2Fecampus.paris-saclay.fr%2Fgrade%2Freport%2Foverview%2Findex.php%3Fid%3D1%26userid%3D0&amp;idp=81494ca74c305a5e381176b43b7862af&amp;passive=off">
-                        <img src="data://image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABFFBMVEX6+vri4uTDwsjy8fL29vasqbJwan/r6+yvrbWXk6Dw8PHn5uhxa4DU09bFxMmloqz4+PirqbKAe4zV1Ne6ucC9u8K3tbz29fXUyMq9qq3CsLPf19j5+fnGxMqkoaz39/eopa+emqbu7e7o4+SSZWx7Lj6pjJD18/PT0dXq6euLcn+CQ06ulZilhop8MUGulJixr7eUkJ2fnKd0b4OOeobt6urb0tR9NEPk3t/29vetq7SQjJrq6uvr5ueWbHOfe4H29PXGtrjk4+XBwMbY19q5pKfo4+PDsrTc09WZcXe6paj5+Pmpi5DJurz6+fnRxMZ7Lz/p5OTy7++VanG4oqXv6+x7LT18Lz+3oKT39vbNwML///8giYlwAAAAAWJLR0RbdLyVNAAAAAd0SU1FB+UCAQcOO2LmxrsAAACnSURBVBjTTY5FEgJRDESDBRncB7cw+ODu7u73PwgfNvxepKpfujoBAFAoVcBJrUHU8kCHqDdwXkCjid+DGS1Wm93xB050CYhu8HhFnz/AQBBD4Ug0Fk8QU1L6daQA0hnK5vIFklmkiFgqV7BaA6g3qAnQaiNTp9vrD4Yyjb694+BkaoUZ0XxB4v/ccrXebGnHv7Q/0PHE+fOF6MoHbvfH88UD6R1n8wOx+BNNORQatAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wMi0wMVQwNzoxNDo1OSswMDowMKkGpwcAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDItMDFUMDc6MTQ6NTkrMDA6MDDYWx+7AAAAAElFTkSuQmCC" alt="" width="24" height="24"/>
-                    CentraleSupelec
-                </a>
-                <a class="btn login-identityprovider-btn btn-block btn-secondary" href="https://ecampus.paris-saclay.fr/auth/saml2/login.php?wants=https%3A%2F%2Fecampus.paris-saclay.fr%2Fgrade%2Freport%2Foverview%2Findex.php%3Fid%3D1%26userid%3D0&amp;idp=15c2068c3f37855aa7c7b63ef8174257&amp;passive=off">
-                        <img src="data://image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAABc0lEQVQoz41RvS9DcRQ99/WnLa1qWh9FiRiYSCwSCbPZIGwmsZr8K0Ji7mK0WHw0JUFEDBIEHTqIkpbW63tef+9eQ5+PoDjJ3c65595zSETwNz5Yxj/YEMH71n8JmOWxZNUViEBq84bNzFmxZAJSz0G8AUzbWUntas39yVaAvHe+gIVZWGu9fXAxu7i6sXXKHlxml5jZZanYTijoZxHTcrK5+/TRZeb4aqAvsTQ/GWkO4lOQnmDn8PLs6vYml/eREQ4FRof6xkb6Yy2h7+cSM1cs5zx75zMMgyBAVbuuZkfrlxddMu37Yrn4ZFbs6vz0RHciqgA8W87+yTURAbBsxyBDNfiCfhVuCsQijcODya72lo54JOBXnoNTdfOF8s8VEHm5Cdpi4UCDUgAeHs3lVBpUi61u2Qsz472dMWLmqsuFYhl/KBCPhpTyKYE8FJ7X1vd+Idd6nJsa60lEidmtHQsQ1RHJe/UEg4i8ziG/GgAACV4BLLDekh6QMW0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMDctMjBUMTA6NDk6MTQrMDI6MDDs3ea7AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTA3LTIwVDEwOjQ5OjE0KzAyOjAwnYBeBwAAAABJRU5ErkJggg==" alt="" width="24" height="24"/>
-                    Institut Optique Graduate School
-                </a>
-                <a class="btn login-identityprovider-btn btn-block btn-secondary" href="https://ecampus.paris-saclay.fr/auth/saml2/login.php?wants=https%3A%2F%2Fecampus.paris-saclay.fr%2Fgrade%2Freport%2Foverview%2Findex.php%3Fid%3D1%26userid%3D0&amp;idp=1ed47c9e34c102df063e4521e4a034bf&amp;passive=off">
-                        <img src="https://ecampus.paris-saclay.fr/theme/image.php/boost_union/core/1736426634/i/user" alt="" width="24" height="24"/>
-                    Etudiants Université Paris Saclay (@etu)
-                </a>
-                <a class="btn login-identityprovider-btn btn-block btn-secondary" href="https://mahara.paris-saclay.fr/auth/xmlrpc/jump.php?hostwwwroot=https%3A%2F%2Fecampus.paris-saclay.fr&amp;wantsurl=%2Fgrade%2Freport%2Foverview%2Findex.php%3Fid%3D1%26userid%3D0&amp;remoteurl=1">
-                        <img src="https://ecampus.paris-saclay.fr/theme/image.php/boost_union/core/1736426634/i/mahara_host" alt="" width="24" height="24"/>
-                    ePortfolio
-                </a>
-        </div>
-    </div>
-    <div id="theme_boost_union-loginorder-firsttimesignup" class="theme_boost_union-loginmethod">
-        <div class="login-divider"></div>
-        <div class="login-instructions ">
-            <h2 class="login-heading">Première visite sur ce site ?</h2>
-            <div><br /><div><div><a href="https://multiweb2.univ-evry.fr/SupportEcampus/">Support utilisateurs : je rencontre des difficultés pour me connecter</a></div></div></div><p><span style="font-size:1rem;"></span></p>
-        </div>
-    </div>
-    </div>
-    <div class="login-divider"></div>
-    <div class="d-flex">
-            <div class="login-languagemenu">
-                <div class="action-menu moodle-actionmenu" id="action-menu-0" data-enhance="moodle-core-actionmenu">
-                
-                        <div class="menubar d-flex " id="action-menu-0-menubar">
-                
-                            
-                
-                
-                                <div class="action-menu-trigger">
-                                    <div class="dropdown">
-                                        <a
-                                            href="#"
-                                            tabindex="0"
-                                            class=" dropdown-toggle icon-no-margin"
-                                            id="action-menu-toggle-0"
-                                            aria-label="Français ‎(fr)‎"
-                                            data-toggle="dropdown"
-                                            role="button"
-                                            aria-haspopup="true"
-                                            aria-expanded="false"
-                                            aria-controls="action-menu-0-menu"
-                                        >
-                                            
-                                            Français ‎(fr)‎
-                                                
-                                            <b class="caret"></b>
-                                        </a>
-                                            <div class="dropdown-menu menu dropdown-menu-right" id="action-menu-0-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-0" role="menu">
-                                                                                                <a href="https://ecampus.paris-saclay.fr/login/index.php?lang=en" class="dropdown-item menu-action" data-lang="en" lang="en" role="menuitem" tabindex="-1" >
-                                                <span class="menu-action-text">English ‎(en)‎</span>
-                                        </a>
-                                                                                                <a href="https://ecampus.paris-saclay.fr/login/index.php?lang=es" class="dropdown-item menu-action" data-lang="es" lang="es" role="menuitem" tabindex="-1" >
-                                                <span class="menu-action-text">Español - Internacional ‎(es)‎</span>
-                                        </a>
-                                                                                                <a href="#" class="dropdown-item menu-action" role="menuitem" tabindex="-1" >
-                                                <span class="menu-action-text">Français ‎(fr)‎</span>
-                                        </a>
-                                            </div>
-                                    </div>
-                                </div>
-                
-                        </div>
-                
-                </div>
-            </div>
-            <div class="divider border-start align-self-center mx-3"></div>
-        <button type="button" class="btn btn-secondary"  data-modal="alert" data-modal-title-str='["cookiesenabled", "core"]'  data-modal-content-str='["cookiesenabled_help_html", "core"]'>Avis relatif aux cookies</button>
-    </div>
-</div></div>
-                    </div>
-                </div>
-                </section>
-            </div>
-        </div>
-    </div>
-    
-    <footer id="page-footer" class="footer-popover bg-white">
-        <div data-region="footer-container-popover">
-                <button class="btn btn-icon bg-secondary icon-no-margin btn-footer-popover" data-action="footer-popover" aria-label="Afficher le pied de page">
-                    <i class="icon fa fa-question fa-fw " aria-hidden="true"  ></i>
-                </button>
-            <div id="boost-union-footer-buttons">
-            </div>
-        </div>
-            <div class="footer-content-popover container" data-region="footer-content-popover">
-                    <div class="footer-section p-3 border-bottom">
-                        <div class="logininfo">
-                            <div class="logininfo">Non connecté.</div>
-                        </div>
-                    </div>
-                <div class="tool_usertours-resettourcontainer"></div>
-                
-                    <div class="footer-section p-3 border-bottom">
-                        <div class="policiesfooter"><a href="https://ecampus.paris-saclay.fr/admin/tool/policy/viewall.php?returnurl=https%3A%2F%2Fecampus.paris-saclay.fr%2Flogin%2Findex.php">Politiques</a></div><div><a class="mobilelink" href="https://download.moodle.org/mobile?version=2024100701&amp;lang=fr&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile&amp;siteurl=https%3A%2F%2Fecampus.paris-saclay.fr">Obtenir l’app mobile</a></div>
-                    </div>
-                    <div class="footer-section p-3 border-bottom">
-                        <div>Fourni par <a href="https://moodle.com">Moodle</a></div>
-                    </div>
-                    <div class="footer-section p-3 border-bottom">
-                        
-<script>
-// EXTERNAL TOOLS: Replace "Outil externe" text in activity name
-// window.addEventListener('load', function() {
-//     var currentUrl = window.location.href;
-//     if (currentUrl.indexOf("modedit.php") !== -1 && currentUrl.indexOf("add=lti") !== -1) {
-//         var button = document.querySelector("fieldset#id_general > div.fcontainer > div.form-group > div.form-inline[data-fieldtype='button'] > button#id_selectcontent");
-//         while (button && button.disabled == false) {
-//         }
-//         var alertDiv = document.createElement('div');
-//         alertDiv.className = "alert alert-danger mt-4";
-//         alertDiv.setAttribute("role", "alert");
-//         alertDiv.innerHTML = 'Merci de ne pas oublier de <b>Sélectionner un contenu</b> avant de valider !';
-//         var container = document.querySelector("fieldset#id_general > div.fcontainer > div.form-group > div.form-inline[data-fieldtype='button']");
-//         if (container) {
-//             container.insertAdjacentElement('afterend', alertDiv);
-//         }
-//     }
-// });
-
-document.addEventListener('DOMContentLoaded', function() {
-    function updateTextAndBorder(imgSrc, newText, borderColor) {
-        document.querySelectorAll(`div.snap-asset-content > h3 > a.mod-link > img[src='${imgSrc}']`).forEach(function(img) {
-            var activityInstance = img.closest(".activityinstance");
-            if (activityInstance) {
-                var snapAssetType = activityInstance.querySelector(".snap-header-card .snap-assettype");
-                if (snapAssetType) {
-                    snapAssetType.textContent = newText;
-                }
-            }
-            var snapActivity = img.closest("li.snap-activity");
-            if (snapActivity) {
-                snapActivity.style.borderTopColor = borderColor;
-            }
-        });
-    }
-
-    updateTextAndBorder('https://ecampus.paris-saclay.fr/pluginfile.php/1/tool_themeassets/assets/0/marsha_32x32_newblue.png', 'Marsha Classe Virtuelle', 'blue');
-    updateTextAndBorder('https://ecampus.paris-saclay.fr/pluginfile.php/1/tool_themeassets/assets/0/marsha_32x32_yellow.png', 'Marsha Webinaire', 'yellow');
-    updateTextAndBorder('https://ecampus.paris-saclay.fr/pluginfile.php/1/tool_themeassets/assets/0/marsha_32x32_blackred.png', 'Marsha Video', 'red');
-
-    var courseToc = document.getElementById("course-toc");
-    if (courseToc) {
-        courseToc.addEventListener("click", function() {
-            updateTextAndBorder('https://ecampus.paris-saclay.fr/pluginfile.php/1/tool_themeassets/assets/0/marsha_32x32_newblue.png', 'Marsha Classe Virtuelle', 'blue');
-            updateTextAndBorder('https://ecampus.paris-saclay.fr/pluginfile.php/1/tool_themeassets/assets/0/marsha_32x32_yellow.png', 'Marsha Webinaire', 'yellow');
-            updateTextAndBorder('https://ecampus.paris-saclay.fr/pluginfile.php/1/tool_themeassets/assets/0/marsha_32x32_blackred.png', 'Marsha Video', 'red');
-        });
-    }
-});
-
-// FRONT PAGE: Replace "Mahara" text in page
-//document.addEventListener('DOMContentLoaded', function() {
-    //document.querySelectorAll("a[title='Home - Mahara']").forEach(function(link) {
-  //      link.textContent = "ePortfolio";
-//    });
-//    var newLink = document.createElement('a');
-//    newLink.id = 'snap-pm-eportfolio';
-//    newLink.href = '/auth/mnet/jump.php?hostid=7';
-//    newLink.textContent = 'ePortfolio';
-//    var gradesLink = document.getElementById('snap-pm-grades');
-//    if (gradesLink) {
-//        gradesLink.insertAdjacentElement('afterend', newLink);
-//    }
-//});
-
-// LOGIN PAGE: Move login blocks
-window.addEventListener('load', function() {
-    var currentUrl = window.location.href;
-    if (currentUrl.indexOf("/login/") !== -1) {
-        var form = document.getElementsByClassName("snap-custom-form")[0];
-        var altlogin = document.getElementById("snap-alt-login");
-        var help = document.getElementById("snap-login-help");
-        var baselogin = document.getElementById("base-login");
-
-        if (help && baselogin) {
-            help.insertAdjacentElement('afterend', baselogin);
-        }
-        if (altlogin && form) {
-            altlogin.insertAdjacentElement('afterend', form);
-        }
-    }
-});
-
-// OUTIL EXTERNE MARSHA: set iframe full page
-window.addEventListener('load', function() {
-    var iframe = document.querySelector('iframe#contentframe[allow*="https://marsha.education"]');
-    if (iframe && typeof iFrameResize === 'function') {
-        iFrameResize({ checkOrigin: false }, iframe);
-    }
-});
-</script>
-                    </div>
-                <script>
-//<![CDATA[
-var require = {
-    baseUrl : 'https://ecampus.paris-saclay.fr/lib/requirejs.php/1736426635/',
-    // We only support AMD modules with an explicit define() statement.
-    enforceDefine: true,
-    skipDataMain: true,
-    waitSeconds : 0,
-
-    paths: {
-        jquery: 'https://ecampus.paris-saclay.fr/lib/javascript.php/1736426635/lib/jquery/jquery-3.7.1.min',
-        jqueryui: 'https://ecampus.paris-saclay.fr/lib/javascript.php/1736426635/lib/jquery/ui-1.13.2/jquery-ui.min',
-        jqueryprivate: 'https://ecampus.paris-saclay.fr/lib/javascript.php/1736426635/lib/requirejs/jquery-private'
-    },
-
-    // Custom jquery config map.
-    map: {
-      // '*' means all modules will get 'jqueryprivate'
-      // for their 'jquery' dependency.
-      '*': { jquery: 'jqueryprivate' },
-
-      // 'jquery-private' wants the real jQuery module
-      // though. If this line was not here, there would
-      // be an unresolvable cyclic dependency.
-      jqueryprivate: { jquery: 'jquery' }
-    }
-};
-
-//]]>
-</script>
-<script src="https://ecampus.paris-saclay.fr/lib/javascript.php/1736426635/lib/requirejs/require.min.js"></script>
-<script>
-//<![CDATA[
-M.util.js_pending("core/first");
-require(['core/first'], function() {
-require(['core/prefetch'])
-;
-M.util.js_pending('filter_mathjaxloader/loader'); require(['filter_mathjaxloader/loader'], function(amd) {amd.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\n    config: [\"Accessible.js\", \"Safe.js\"],\r\n    errorSettings: { message: [\"!\"] },\r\n    skipStartupTypeset: true,\r\n    messageStyle: \"none\"\r\n});\r\n","lang":"fr"}); M.util.js_complete('filter_mathjaxloader/loader');});;
-M.util.js_pending('filter_glossary/autolinker'); require(['filter_glossary/autolinker'], function(amd) {amd.init(); M.util.js_complete('filter_glossary/autolinker');});;
-require(["media_videojs/loader"], function(loader) {
-    loader.setUp('fr');
-});;
-M.util.js_pending('report_allylti/main'); require(['report_allylti/main'], function(amd) {amd.init(); M.util.js_complete('report_allylti/main');});;
-
-        require(['jquery', 'tool_policy/jquery-eu-cookie-law-popup', 'tool_policy/policyactions'], function($, Popup, ActionsMod) {
-            // Initialise the guest popup.
-            $(document).ready(function() {
-                // Initialize popup.
-                $(document.body).addClass('eupopup');
-                if ($(".eupopup").length > 0) {
-                    $(document).euCookieLawPopup().init();
-                }
-
-                // Initialise the JS for the modal window which displays the policy versions.
-                ActionsMod.init('[data-action="view-guest"]');
-            });
-        });
-    ;
-
-require(['theme_boost/footer-popover'], function(FooterPopover) {
-    FooterPopover.init();
-});
-;
-
-M.util.js_pending('theme_boost/loader');
-require(['theme_boost/loader'], function() {
-  M.util.js_complete('theme_boost/loader');
-});
-;
-
-        require(['core/togglesensitive'], function(ToggleSensitive) {
-            ToggleSensitive.init("password", 1);
-        });
-    require(['core_form/submit'], function(Submit) {
-        Submit.init("loginbtn");
-    });
-;
-M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(1, []); M.util.js_complete('core/notification');});;
-M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
-M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
-M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
-M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(null); M.util.js_complete('core/storage_validation');});
-    M.util.js_complete("core/first");
-});
-//]]>
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?delayStartupUntil=configured"></script>
-<script>
-//<![CDATA[
-M.str = {"moodle":{"lastmodified":"Modifi\u00e9 le","name":"Nom","error":"Erreur","info":"Information","yes":"Oui","no":"Non","cancel":"Annuler","confirm":"Confirmer","areyousure":"Voulez-vous vraiment continuer\u00a0?","closebuttontitle":"Fermer","unknownerror":"Erreur inconnue","file":"Fichier","url":"URL","collapseall":"Tout replier","expandall":"Tout d\u00e9plier"},"repository":{"type":"Type","size":"Taille","invalidjson":"Cha\u00eene JSON non valide","nofilesattached":"Aucun fichier joint","filepicker":"S\u00e9lecteur de fichiers","logout":"D\u00e9connexion","nofilesavailable":"Aucun fichier disponible","norepositoriesavailable":"D\u00e9sol\u00e9, aucun de vos d\u00e9p\u00f4ts actuels ne peut retourner de fichiers dans le format requis.","fileexistsdialogheader":"Le fichier existe","fileexistsdialog_editor":"Un fichier de ce nom a d\u00e9j\u00e0 \u00e9t\u00e9 joint au texte que vous modifiez.","fileexistsdialog_filemanager":"Un fichier de ce nom a d\u00e9j\u00e0 \u00e9t\u00e9 joint","renameto":"Renommer \u00e0 \u00ab\u00a0{$a}\u00a0\u00bb","referencesexist":"Il y a {$a} liens qui pointent vers ce fichier","select":"S\u00e9lectionnez"},"admin":{"confirmdeletecomments":"Voulez-vous vraiment supprimer les commentaires s\u00e9lectionn\u00e9s\u00a0?","confirmation":"Confirmation"},"debug":{"debuginfo":"Info de d\u00e9bogage","line":"Ligne","stacktrace":"Trace de la pile"},"langconfig":{"labelsep":"&nbsp;"}};
-//]]>
-</script>
-<script>
-//<![CDATA[
-(function() {M.util.help_popups.setup(Y);
- M.util.js_pending('random67822c872293e5'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random67822c872293e5'); });
-})();
-//]]>
-</script>
-
-            </div>
-    
-        <div class="footer-content-debugging footer-dark bg-dark text-light">
-            <div class="container-fluid footer-dark-inner">
-                
-            </div>
-        </div>
-    
-    </footer>
-    
-        <div id="footnote" class="py-3">
-            <div class="container-fluid px-0">
-                <div class="container-fluid">
-    <div class="row">
-
-        <div class="col-lg-4 col-md-6 col-12 pb-5">
-            <h4 class="text-center">eCampus</h4>
-
-            <!--
-            <a href="/mod/page/view.php?id=497402">
-                <i class="fa fa-chevron-right pr-2"></i>Nos Missions
-            </a>
-            <br />
-            <br />
--->
-
-            <div>
-                <a href="#" data-toggle="collapse" data-target="#footer_ups" aria-expanded="false" aria-controls="footer_ups">
-                    <span><i class="fa fa-chevron-right pr-2"></i>Université Paris-Saclay</span>
-                </a>
-                <a href="#" class="text-decoration-none" data-toggle="collapse" data-target="#footer_ups" aria-expanded="false" aria-controls="footer_ups">
-                    <span class="badge badge-primary badge-pill">7 <i class="fa fa-caret-down"></i><i class="fa fa-caret-up"></i></span>
-                </a>
-            </div>
-
-            <div id="footer_ups" class="collapse pl-3" aria-labelledby="Établissements de l'Université Paris-Saclay">
-                <ul class="list-unstyled">
-                    <li><i class="fa fa-angle-right pr-2"></i> <a href="https://www.universite-paris-saclay.fr" alt="Site internet de l'Université Paris-Saclay" target="_blank">UPSaclay</a></li>
-                    <li><i class="fa fa-angle-right pr-2"></i> <a href="https://www.univ-evry.fr" alt="Site internet de l'Université d'Évry Val d’Essonne" target="_blank">UEVE</a></li>
-                    <li><i class="fa fa-angle-right pr-2"></i> <a href="https://www.uvsq.fr" alt="Site internet de l'université de Versailles-Saint-Quentin-en-Yvelines" target="_blank">UVSQ</a></li>
-                    <li><i class="fa fa-angle-right pr-2"></i> <a href="https://www.centralesupelec.fr" alt="Site internet de Centrale Supélec" target="_blank">Centrale Supélec</a></li>
-                    <li><i class="fa fa-angle-right pr-2"></i> <a href="https://ens-paris-saclay.fr" alt="Site internet de l'École Normale Supérieure" target="_blank">École Normale Supérieure</a></li>
-                    <li><i class="fa fa-angle-right pr-2"></i> <a href="https://www.institutoptique.fr" alt="Site internet de l'Institut d'Optique Graduate School" target="_blank">Institut d'Optique</a></li>
-                    <li><i class="fa fa-angle-right pr-2"></i> <a href="http://www.agroparistech.fr" alt="Site internet de AgroParisTech" target="_blank">AgroParisTech</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <a href="#" data-toggle="collapse" data-target="#footer_ipp" aria-expanded="false" aria-controls="footer_ipp">
-                    <span><i class="fa fa-chevron-right pr-2"></i>Institut Polytechnique de Paris</span>
-                </a>
-                <a href="#" class="text-decoration-none" data-toggle="collapse" data-target="#footer_ipp" aria-expanded="false" aria-controls="footer_ipp">
-                    <span class="badge badge-primary badge-pill">3 <i class="footer_ipp_glyph fa fa-caret-down"></i><i class="fa fa-caret-up"></i></span>
-                </a>
-            </div>
-
-            <div id="footer_ipp" class="collapse pl-3" aria-labelledby="Établissements de l'Institut Polytechnique de Paris">
-                <ul class="list-unstyled">
-                    <li><i class="fa fa-angle-right pr-2"></i> <a href="https://www.ensta-paris.fr" alt="Site internet de ENSTA Paris" target="_blank">ENSTA</a></li>
-                    <li><i class="fa fa-angle-right pr-2"></i> <a href="https://www.telecom-paris.fr" alt="Site internet de Télécom Paris" target="_blank">Télécom Paris</a></li>
-                </ul>
-            </div>
-
-            <br>
-            <i class="fa fa-chevron-right pr-2"></i><a href="https://www.universite-paris-saclay.fr/collaborations/international/loffre-de-lalliance-eugloh-pour-les-etudiants" target="_blank">Université européenne EUGLOH</a>
-
-        </div>
-
-
-        <div class="col-lg-4 col-md-6 col-12 pb-4">
-
-            
-                <h4 class="text-center">Assistance</h4>
-                <ul class="list-unstyled">
-                    <li><i class="fa fa-chevron-right pr-2"></i><a href="https://multiweb2.univ-evry.fr/SupportEcampus/">Problèmes de connexion</a></li>
-                    <li>&nbsp;</li>
-                    <!--
-                    <li><i class="fa fa-chevron-right pr-2"></i><a href="#">FAQ & Aide</a></li>   
-                    -->
-                    <li><i class="fa fa-chevron-right pr-2"></i><a href="https://moodle.com/fr/solutions/application-moodle/" target="_blank">Obtenir l'app mobile</a></li>
-                </ul>
-            
-
-        </div>
-
-        <div class="col-lg-4 col-md-12 col-12 pb-4">
-            
-                <h4 class="text-center">Informations légales</h4>
-                <ul class="list-unstyled">
-                    <li><i class="fa fa-chevron-right pr-2"></i><a href="https://www.universite-paris-saclay.fr/vie-de-campus/handicap/ressources-et-outils/accessibilite-numerique" target="_blank">Accessibilité numérique</a></li>
-                    <li><i class="fa fa-chevron-right pr-2"></i><a href="/admin/tool/policy/view.php?versionid=1">Politique de confidentialité</a></li>
-                    <!--
-                    <li><i class="fa fa-chevron-right pr-2"></i><a href="/mod/page/view.php?id=497404">Cr&eacute;dits</a></li>   
-                    <li><i class="fa fa-chevron-right pr-2"></i><a href="/admin/tool/dataprivacy/summary.php">Résumé de rétention des données</a></li>   
-                    <li>&nbsp;</li><li>
--->
-                </ul>
-            
-        </div>
-
-    </div>
-</div>
-            </div>
-                <div class="container-fluid px-0 mt-1">
-                        <span class="theme_boost_union_footnote_link theme_boost_union_footnote_page1link pe-2 me-2">
-                            <a href="https://ecampus.paris-saclay.fr/theme/boost_union/pages/page1.php">Nouveautés</a>
-                        </span>
-                </div>
-        </div>
+<div class="options">
+    <button>Ajouter une Note</button>
+    <button>Supprimer une Note</button>
+    <button>Exporter</button>
 </div>
 
+<table>
+    <thead>
+        <tr>
+            <th>Matière</th>
+            <th>Note</th>
+            <th>Commentaire</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mathématiques</td>
+            <td>16/20</td>
+            <td>Bon progrès, continue comme ça !</td>
+        </tr>
+        <tr>
+            <td>Physique</td>
+            <td>14/20</td>
+            <td>Résultats satisfaisants.</td>
+        </tr>
+        <tr>
+            <td>Français</td>
+            <td>18/20</td>
+            <td>Très bon travail, excellent essai !</td>
+        </tr>
+        <tr>
+            <td>Anglais</td>
+            <td>15/20</td>
+            <td>Amélioration notable en compréhension orale.</td>
+        </tr>
+    </tbody>
+</table>
 
-</body></html>
+</body>
+</html>
