@@ -129,7 +129,7 @@
 
 
         <!-- Etat civile -->
-        <div id="!etat_civil" class="widget-container widget active">
+        <div id="!etat_civil" style="display:none;" class="widget">
             <div class="widget">
                 <h4>Notes & résultats</h4>
                 <p>Ceci est le contenu du premier widget 1. Il peut contenir du texte, des images ou d'autres éléments.</p>
@@ -159,7 +159,7 @@
 
 
         <!-- Ifos perso -->
-        <div id="!infos" class="widget-container widget" disabled>
+        <div id="!infos" style="display:none;" class="widget">
             <div class="widget">
                 <h4>Informations anuelles</h4>
                 <p>Ceci est le contenu du premier widget 2. Il peut contenir du texte, des images ou d'autres éléments.</p>
@@ -182,7 +182,7 @@
         
 
         <!-- Notes & Resultats -->
-        <div id="!notes" class="widget-container widget" disabled>
+        <div id="!notes" style="display:block;" class="widget">
 
 
             
@@ -293,15 +293,11 @@
     <script>
         // Fonction pour afficher le contenu du widget sélectionné
         function showContent(widgetId) {
+            var x = document.getElementById("!etat_civil"); x.style.display = "none";
+            var x = document.getElementById("!infos");      x.style.display = "none";
+            var x = document.getElementById("!notes");      x.style.display = "none";
             // Cacher tous les widgets
-            const widgets = document.querySelectorAll('.widget-container');
-            widgets.forEach(function(widget) {
-                widget.classList.remove('active');
-            });
-
-            // Afficher le widget sélectionné
-            const activeWidget = document.getElementById(widgetId);
-            activeWidget.classList.add('active');
+            var x = document.getElementById(widgetId); x.style.display = "block";
         }
     </script>
 
