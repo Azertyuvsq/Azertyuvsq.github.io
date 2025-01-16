@@ -104,8 +104,7 @@
 
         <div class="separator"></div>
         
-        <a href="#!aide" onclick="showContent('!aide')">Aide</a>
-        <a href="#!deconnection" onclick="showContent('!deconnection')">Deconnection</a>
+        <a href="/index.html"">Déconnexion</a>
 
         <div class="separator"></div>
     </div>
@@ -369,7 +368,8 @@
         // Fonction pour afficher le contenu du widget sélectionné
         function showContent(widgetId) {
             var x = document.getElementById("!etat_civil"); x.style.display = "none";
-            var x = document.getElementById("!infos");      x.style.display = "none";
+            var x = document.getElementById("!infos_perso");      x.style.display = "none";
+            var x = document.getElementById("!infos_anu");      x.style.display = "none";
             var x = document.getElementById("!notes");      x.style.display = "none";
             // Cacher tous les widgets
             var x = document.getElementById(widgetId); x.style.display = "block";
