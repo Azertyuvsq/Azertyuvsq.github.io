@@ -21,11 +21,6 @@
             align-items: center;
         }
 
-        
-        /*h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }*/
         .options {
             /* margin: 20px; */
             margin: 10px;
@@ -69,58 +64,68 @@
 
 
 
+        /* ------- FOOTERS ---------- */
+        footer {
+          background-color: #333;
+          color: white;
+          padding: 20px;
+          position: fixed;
+          width: 100%;
+                    left: 0;
+          bottom: 0;
+        }
+        
+        .footer-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 30px;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        
+        .footer-column {
+          flex: 1;
+        }
+        
+        .footer-column h3 {
+          margin-bottom: 15px;
+          font-size: 1.2em;
+          text-transform: uppercase;
+        }
+        
+        .footer-column ul {
+          list-style: none;
+          padding: 0;
+        }
+        
+        .footer-column ul li {
+          margin: 5px 0;
+        }
+        
+        .footer-column ul li a {
+          color: white;
+          text-decoration: none;
+          font-size: 1em;
+        }
+        
+        .footer-column ul li a:hover {
+          text-decoration: underline;
+        }
+
+
 
 
         
+        /* ------- Les <a></a> ------- */
+        a:visited {
+            color: inherit; /* Même couleur après avoir été cliqué */
+        }
 
-        footer {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  position: fixed;
-  width: 100%;
-            left: 0;
-  bottom: 0;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-column {
-  flex: 1;
-}
-
-.footer-column h3 {
-  margin-bottom: 15px;
-  font-size: 1.2em;
-  text-transform: uppercase;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin: 5px 0;
-}
-
-.footer-column ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1em;
-}
-
-.footer-column ul li a:hover {
-  text-decoration: underline;
-}
-
+        /* Optionnel : si vous souhaitez ajouter un style au survol */
+        a:hover {
+            color: blue; /* Par exemple, change la couleur au survol */
+        }
         
 
     </style>
@@ -129,7 +134,7 @@
 
 <header>
     <a href="azertyuvsq.github.io">  <img src="pngs/picto-eCampus.png" alt="Ecampus" width="70" height="70">   </a>
-    <a href="azertyuvsq.github.io">  <h3 style="background-color:white">Dossier</h3>   </a>
+    <a href="azertyuvsq.github.io">  <h3 style="background-color:white">   Dossier</h3>   </a>
     </header>
 
 <div class="options">
